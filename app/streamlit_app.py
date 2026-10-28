@@ -28,12 +28,8 @@ st.session_state["ctx"] = sidebar.build(bundle)
 PAGES = Path(__file__).parent / "views"   # not "pages/": that name triggers Streamlit's legacy MPA mode
 nav = st.navigation([
     st.Page(PAGES / "1_overview.py", title="Overview", default=True),
-    st.Page(PAGES / "2_coverage_map.py", title="Coverage map"),
-    st.Page(PAGES / "3_station_detail.py", title="Station detail"),
+    st.Page(PAGES / "2_coverage_map.py", title="Coverage map & station detail"),
     st.Page(PAGES / "4_amstel_corridor.py", title="Amstel corridor"),
-    st.Page(PAGES / "5_pressures.py", title="Pressures (RWZI)"),
-    st.Page(PAGES / "6_phosphorus_chain.py", title="Phosphorus chain"),
-    st.Page(PAGES / "7_data_gaps.py", title="Data gaps"),
-    st.Page(PAGES / "8_methods.py", title="Methods & limitations"),
+    st.Page(PAGES / "5_pollution_pressures.py", title="Pollution pressures"),
 ])
 nav.run()

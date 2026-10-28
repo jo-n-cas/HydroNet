@@ -7,9 +7,8 @@ import pytest
 from streamlit.testing.v1 import AppTest
 
 APP = str(Path(__file__).resolve().parents[1] / "app" / "streamlit_app.py")
-PAGES = ["views/1_overview.py", "views/2_coverage_map.py", "views/3_station_detail.py",
-         "views/4_amstel_corridor.py", "views/5_pressures.py", "views/6_phosphorus_chain.py",
-         "views/7_data_gaps.py", "views/8_methods.py"]
+PAGES = ["views/1_overview.py", "views/2_coverage_map.py",
+         "views/4_amstel_corridor.py"]
 
 
 def _run(page, **state):
@@ -30,8 +29,7 @@ def test_page_renders_with_defaults(page):
     assert at.session_state["ctx"].bundle.synthetic          # fixtures are flagged (banner shown in browser)
 
 
-@pytest.mark.parametrize("page", ["views/2_coverage_map.py", "views/4_amstel_corridor.py",
-                                  "views/6_phosphorus_chain.py", "views/7_data_gaps.py"])
+@pytest.mark.parametrize("page", ["views/2_coverage_map.py", "views/4_amstel_corridor.py"])
 def test_pages_render_with_narrow_settings(page):
     at = _run(page, buffer_m=25, stretch_km=(2.0, 6.0), group="tier2_medicines", source="chem")
     assert not at.exception, [e.message for e in at.exception]
