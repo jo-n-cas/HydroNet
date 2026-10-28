@@ -67,8 +67,10 @@ def build(bundle: Bundle) -> Context:
     ss = st.session_state
     sb = st.sidebar
     sb.markdown("### Analysis settings")
+    # All filters live in a form: changes only take effect when "Apply filters" is pressed.
+    f = sb.form("analysis_settings", border=False)
 
-    source = sb.radio("Station source", ["both", "chem", "bio"], horizontal=True, key="source",
+    source = f.radio("Station source", ["both", "chem", "bio"], horizontal=True, key="source",
                       format_func={"both": "both", "chem": "chemistry", "bio": "biology"}.get,
                       help="Which location inventory to show: chemistry (FYCHEM), biology (HB) or both.")
 
@@ -76,7 +78,7 @@ def build(bundle: Bundle) -> Context:
     default_group = cfg["ui"]["default_parameter_group"]
     if "group" not in ss:
         ss.group = default_group
-    group = sb.selectbox("Parameter group", group_keys, key="group", format_func=lambda k: group_label(k, grp),
+    group = f.selectbox("Parameter group", group_keys, key="group", format_func=lambda k: group_label(k, grp),
                          help=GROUP_HELP)
     ss.group_label = group_label(group, grp)
 
@@ -87,7 +89,7 @@ def build(bundle: Bundle) -> Context:
         default_p = cfg["ui"]["default_parameter"]
         ss.parameter_choice = default_p if default_p in params else options[0]
         ss._param_group = group
-    choice = sb.selectbox("Parameter", options, key="parameter_choice",
+    choice = f.selectbox("Parameter", options, key="parameter_choice",
                           help="A single parameter within the group, or all of them together.")
     parameter = None if choice == options[0] else choice
     ss.parameter = parameter
@@ -95,7 +97,7 @@ def build(bundle: Bundle) -> Context:
     buffers = cfg["amstel"]["ui_buffer_options_m"]
     if "buffer_m" not in ss:
         ss.buffer_m = cfg["amstel"]["ui_default_buffer_m"]
-    buffer_m = sb.select_slider("Amstel buffer (m)", buffers, key="buffer_m",
+    buffer_m = f.select_slider("Amstel buffer (m)", buffers, key="buffer_m",
                                 help="Distance from the river centreline. 100 m is the pipeline rule; "
                                      "25 / 50 m show how sensitive results are to that choice.")
 
@@ -103,26 +105,28 @@ def build(bundle: Bundle) -> Context:
     km_max = round(length / 1000, 1)
     if "stretch_km" not in ss:
         ss.stretch_km = (0.0, km_max)
-    stretch = sb.slider("River stretch (km from Amstelhoek)", 0.0, km_max, key="stretch_km", step=0.1,
+    stretch = f.slider("River stretch (km from Amstelhoek)", 0.0, km_max, key="stretch_km", step=0.1,
                         help="Select a stretch of the Amstel; km 0 = Amstelhoek (upstream), "
                              f"km {km_max} = Binnen-Amstel (downstream). Drives map, strip and corridor views.")
 
     lo, hi = _date_bounds(bundle)
     if "date_range" not in ss:
         ss.date_range = (lo, hi)
-    date_range = sb.slider("Date range", lo, hi, key="date_range", format="YYYY",
+    date_range = f.slider("Date range", lo, hi, key="date_range", format="YYYY",
                            help="Filters biology, hydrology and RWZI series. Coverage counts have no dates.")
 
     bio = bundle.get("bio_values.parquet")
     codes = [] if bio is None else sorted(int(c) for c in bio["quality_code"].dropna().unique())
     if "quality_codes" not in ss:
         ss.quality_codes = codes
-    quality = sb.multiselect("Biology quality codes", codes, key="quality_codes",
+    quality = f.multiselect("Biology quality codes", codes, key="quality_codes",
                              help="kwaliteitsoordeelcode 0 / 3 / 9. Code meanings are not confirmed, "
                                   "so nothing is hidden by default; deselect to filter.")
 
-    show_context = sb.toggle("Show stations outside the corridor", value=False, key="show_context",
-                             help="Context only: tiny grey dots, no counts.")
+    show_context = f.toggle("Show stations outside the corridor", value=False, key="show_context",
+                            help="Context only: tiny grey dots, no counts.")
+    f.form_submit_button("Apply filters", type="primary", width="stretch",
+                         help="Filters are only applied to the map and charts when you press this button.")
 
     a = bundle.get("amstel_stations.parquet")
     if a is None:
