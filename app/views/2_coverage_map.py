@@ -11,8 +11,9 @@ ctx = st.session_state["ctx"]
 b, grp, cfg = ctx.bundle, data.groups(), data.settings()
 
 st.title("Coverage map")
-st.markdown("Monitoring locations within the Amstel corridor, sized and coloured by how many observations "
-            "exist for the selected parameter group or parameter. Click a location to inspect it.")
+st.markdown("Monitoring locations within the Amstel corridor, sized and coloured by concentration of observation "
+            "exist for the selected parameter group or parameter. The main goal is to use this map to identify where does it makes sense to make regular measurements and what kind of measurements are needed." \
+            "Click a location to inspect it.")
 
 cov = ctx.coverage()
 if cov is None or b.get("stations.parquet") is None or b.get("amstel_stations.parquet") is None:

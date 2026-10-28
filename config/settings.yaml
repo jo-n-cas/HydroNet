@@ -4,7 +4,7 @@
 paths:
   # Raw AGV files are looked up per file in these folders, first match wins (the team uses different
   # layouts: data/internal/ for the colleagues' scripts, the repo root locally). Raw files are never modified.
-  raw_dirs: [data/raw, data/internal, .]
+  raw_dirs: [tests/fixtures/processed]
   raw_files:
     fychem_locations: FYCHEM_unique_locations_with_measurements.geojson
     hb_locations: HB_unique_locations_with_measurements.geojson
@@ -20,54 +20,79 @@ paths:
   external_dir: data/external
 
 amstel:
-  centreline_rd: data/external/amstel_rd.geojson   # built by scripts/build_amstel_line.py
-  max_distance_m: 100                               # pipeline selection rule (docs/AMSTEL_STATION_SELECTION.md)
-  end_tolerance_m: 1.0                              # projection this close to a line end -> beyond_river_end
+  centreline_rd: data/external/amstel_rd.geojson # built by scripts/build_amstel_line.py
+  max_distance_m: 100 # pipeline selection rule (docs/AMSTEL_STATION_SELECTION.md)
+  end_tolerance_m: 1.0 # projection this close to a line end -> beyond_river_end
   overrides: config/amstel_overrides.csv
   ui_buffer_options_m: [25, 50, 100]
   ui_default_buffer_m: 100
   # Hydrology sensor positions are not in the data: taken from the OSM structures they are named after (ASSUMED:
   # the exact sensor position at the structure is unknown). Source: OpenStreetMap, Overpass query 2026-10-28.
   sensors:
-    Amstelsluizen: {sensor_id: MPP00013_LIT054_1, lat: 52.36222, lon: 4.90310, x_rd: 122025, y_rd: 486147, chainage_km: 21.02, osm_ref: "lock_gate ways 527004192-527004204 (centroid)", source: "OpenStreetMap, ODbL"}
-    Berlagebrug: {sensor_id: MPP00976_LIT054_1, lat: 52.34734, lon: 4.91270, x_rd: 122668, y_rd: 484487, chainage_km: 19.23, osm_ref: "relation/18580784", source: "OpenStreetMap, ODbL"}
+    Amstelsluizen:
+      {
+        sensor_id: MPP00013_LIT054_1,
+        lat: 52.36222,
+        lon: 4.90310,
+        x_rd: 122025,
+        y_rd: 486147,
+        chainage_km: 21.02,
+        osm_ref: "lock_gate ways 527004192-527004204 (centroid)",
+        source: "OpenStreetMap, ODbL",
+      }
+    Berlagebrug:
+      {
+        sensor_id: MPP00976_LIT054_1,
+        lat: 52.34734,
+        lon: 4.91270,
+        x_rd: 122668,
+        y_rd: 484487,
+        chainage_km: 19.23,
+        osm_ref: "relation/18580784",
+        source: "OpenStreetMap, ODbL",
+      }
 
 pressures:
   agv_installation_prefix: NL.11
-  rwzi_locations: config/rwzi_locations.csv        # from OSM 2026-10-28; 9 of 12 AGV plants located (see DECISIONS.md)
+  rwzi_locations: config/rwzi_locations.csv # from OSM 2026-10-28; 9 of 12 AGV plants located (see DECISIONS.md)
   # Plants linked to the Amstel in sources (IPLO 2024; 2017 permit documents). ASSUMED until discharge points are verified.
   amstel_linked_rwzi: [NL.11.UI, NL.11.RV, NL.11.AM]
-  nearby_station_buffer_m: 2000                    # placeholder analysis choice, shown in the UI; not a norm
+  nearby_station_buffer_m: 2000 # placeholder analysis choice, shown in the UI; not a norm
   # Effluent metrics: a row belongs to a metric when quantity, parameter AND unit all match
   # (checked against the real NL.11 effluent rows 2026-10-28). 'Pulsvolume' (m3/p) is a pulse size, not a flow.
   effluent_metrics:
     volume:
       label: Effluent volume
-      match: {quantity: Volume, parameter: Niet van toepassing, unit: m3}
-      yearly: sum                                  # m3 per year
+      match: { quantity: Volume, parameter: Niet van toepassing, unit: m3 }
+      yearly: sum # m3 per year
       yearly_unit: m3/year
     phosphate:
       label: Effluent phosphate (dissolved, as P)
-      match: {quantity: (massa)Concentratie, parameter: fosfaat, unit: mg/l}
-      yearly: median                               # median of daily values
+      match: { quantity: (massa)Concentratie, parameter: fosfaat, unit: mg/l }
+      yearly: median # median of daily values
       yearly_unit: mg P/l
     suspended_solids:
       label: Effluent suspended solids
-      match: {quantity: (massa)Concentratie, parameter: Onopgeloste bestandsdelen, unit: mg/l}
+      match:
+        {
+          quantity: (massa)Concentratie,
+          parameter: Onopgeloste bestandsdelen,
+          unit: mg/l,
+        }
       yearly: median
       yearly_unit: mg/l
   # Measurement points that are not final effluent although tagged Effluent.
   exclude_measurement_points:
-    - 11.AWwlBI.mi-001.PO4                         # "Online PO4 NBT 2.1 Onderzoekstraat" (research line)
+    - 11.AWwlBI.mi-001.PO4 # "Online PO4 NBT 2.1 Onderzoekstraat" (research line)
 
 cleaning:
   sentinel_values: [-999]
-  hydrology_outlier_robust_sd: 6                   # flag (never remove) beyond median +/- k * robust SD
+  hydrology_outlier_robust_sd: 6 # flag (never remove) beyond median +/- k * robust SD
   # Exact values that are codes, not measurements (found in the real files 2026-10-28). Flagged, never removed;
   # the flag name says why. Checked before the robust-outlier rule.
   hydrology_suspect_values:
-    level_mNAP: {-32.768: sentinel_-32.768}              # Berlagebrug: int16 'no data' code / 1000
-    Q_m3_per_day: {-28300000: repeated_extreme_value}    # Berlagebrug: 185 identical days 2013-2019 (sensor ceiling?)
+    level_mNAP: { -32.768: sentinel_-32.768 } # Berlagebrug: int16 'no data' code / 1000
+    Q_m3_per_day: { -28300000: repeated_extreme_value } # Berlagebrug: 185 identical days 2013-2019 (sensor ceiling?)
 
 ui:
   # Switch to real data with one line: data_dir: data/processed
@@ -75,5 +100,5 @@ ui:
   default_parameter_group: tier1_nutrients_core
   default_parameter: Ptot_mgP/l
   phosphorus_chain:
-    default_plant: NL.11.UI                        # upstream, nearest Amstel-linked plant (0.8 km)
-    window_km: 3                                   # corridor stretch either side of the plant's nearest river km
+    default_plant: NL.11.UI # upstream, nearest Amstel-linked plant (0.8 km)
+    window_km: 3 # corridor stretch either side of the plant's nearest river km
