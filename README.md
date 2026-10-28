@@ -31,9 +31,10 @@ The centreline is built from the OpenStreetMap exports in `data/external/`. Its 
 ```bash
 PYTHONPATH=src .venv/bin/python -m hydronet.pipeline              # full run (~15 s)
 PYTHONPATH=src .venv/bin/python -m hydronet.pipeline --skip-rwzi  # re-use the cached RWZI extract
+PYTHONPATH=src .venv/bin/python -m hydronet.pipeline --without-rwzi # build available real data if RWZI CSVs are absent
 ```
 
-The pipeline reads the raw AGV files from the first folder in `paths.raw_dirs` that has them (`data/raw`, `data/internal` or the repo root). It writes `data/processed/*.parquet`, `rejected_values.parquet` and `pipeline_manifest.json` (row counts, rejected reasons, checks). Nothing is deleted silently: invalid rows go to `rejected_values.parquet` with a reason, and suspect values are kept with a `qa_flag`.
+The pipeline reads the raw AGV files from the first folder in `paths.raw_dirs` that has them (`data/raw`, `data/internal` or the repo root). It writes `data/processed/*.parquet`, `rejected_values.parquet` and `pipeline_manifest.json` (row counts, rejected reasons, checks). Nothing is deleted silently: invalid rows go to `rejected_values.parquet` with a reason, and suspect values are kept with a `qa_flag`. `--without-rwzi` leaves the RWZI effluent output unavailable; the overview, coverage map and corridor still use real data.
 
 ## Run the app
 
@@ -53,14 +54,10 @@ ui:
   # data_dir: tests/fixtures/processed # synthetic fixtures for layout work
 ```
 
-<<<<<<< Updated upstream
 The environment variable `HYDRONET_DATA_DIR` overrides this; the tests use it to always run on the fixtures.
 
-On fixtures, every page shows a **"Synthetic fixture data"** banner, and all station IDs start with `SYN`. Regenerate the fixtures with:
-=======
 With fixture data selected, the app shows a **synthetic data** banner. The other dashboard
 pages use `SYN` station IDs. Regenerate the fixtures with:
->>>>>>> Stashed changes
 
 ```bash
 .venv/bin/python scripts/make_ui_fixtures.py

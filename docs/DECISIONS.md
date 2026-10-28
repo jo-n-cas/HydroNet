@@ -2,7 +2,6 @@
 
 Assumptions and deviations, newest first. Format: date, decision, reason.
 
-<<<<<<< Updated upstream
 ## 2026-10-28: Cleaning pipeline and switch of the UI to real data
 
 - **Pipeline:** `python -m hydronet.pipeline` (with `src` on `PYTHONPATH`) rebuilds `data/processed/` in about 12 s, including a streamed scan of the 28.7 M-row `MeasurementValues.csv`. `--skip-rwzi` re-uses the cached extract `data/interim/rwzi_values_nl11.parquet`.
@@ -26,7 +25,7 @@ Assumptions and deviations, newest first. Format: date, decision, reason.
 - **Observation, not interpreted:** Berlagebrug Q is almost flat near 0 from about late 2022 onward, which looks like a sensor or method change. To be checked with AGV.
 - **RWZI partial years:** the effluent files end on 2026-01-01, so "2026" is one day. Years with fewer than 300 days are drawn hollow and not connected.
 - **Biology on the Amstel:** VGD125 was sampled once, on 2005-08-09 (44 rows). It has no values in the 2021–2024 overlap with the RWZI data; the phosphorus chain states this.
-=======
+
 ## 2026-10-28: First chemical detection reach model
 
 - **User scenario:** treat each positive inventory count as assumed chemical presence. This is displayed explicitly on the detection page; unmeasured stations are not treated as negative. Because there is no confirmed low station, this mode cannot locate an entry reach or learn transport.
@@ -34,7 +33,6 @@ Assumptions and deviations, newest first. Format: date, decision, reason.
 - **Scope:** chloride (`Cl_mg/l`), ammonium (`NH4_mgN/l_nf`) and total phosphorus (`Ptot_mgP/l`), the three most frequent pollutant-related concentration parameters by aggregate observation count at the selected Amstel chemistry stations (3,696 / 3,550 / 3,525). Temperature, oxygen and conductivity are excluded because they are context measurements rather than pollutants.
 - **Map selection:** the overview control switches between assumed chemical locations and a hypothetical downstream route. Inventory counts never stand in for concentrations.
 - **Limit:** changing flow direction, side channels and mixed water bodies can invalidate the route. Raw chemistry values, confirmed negative stations and verified local flow are unavailable in the current files.
->>>>>>> Stashed changes
 
 ## 2026-10-28: UI build decisions (branch `ui`)
 

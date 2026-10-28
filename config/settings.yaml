@@ -4,7 +4,7 @@
 paths:
   # Raw AGV files are looked up per file in these folders, first match wins (the team uses different
   # layouts: data/internal/ for the colleagues' scripts, the repo root locally). Raw files are never modified.
-  raw_dirs: [tests/fixtures/processed]
+  raw_dirs: [data/raw, data/internal, .]
   raw_files:
     fychem_locations: FYCHEM_unique_locations_with_measurements.geojson
     hb_locations: HB_unique_locations_with_measurements.geojson

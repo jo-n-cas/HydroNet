@@ -2,6 +2,7 @@
 
     python -m hydronet.pipeline            (from repo root, with src/ on PYTHONPATH)
     python -m hydronet.pipeline --skip-rwzi  (re-use the cached RWZI extract; skip the 3.4 GB scan)
+    python -m hydronet.pipeline --without-rwzi  (build available outputs without RWZI source files)
 
 Writes data/processed/*.parquet (contract: hydronet.schemas), rejected_values.parquet and
 pipeline_manifest.json. Raw files are never modified.
@@ -49,14 +50,18 @@ def _write(df: pd.DataFrame, name: str, out: Path, manifest: dict, rows_in: int 
     log.info("%-26s %8d rows", name, len(df))
 
 
-def run(skip_rwzi_scan: bool = False) -> dict:
+def run(skip_rwzi_scan: bool = False, without_rwzi: bool = False) -> dict:
     t0 = time.time()
     s = load_settings()
     out = repo_path(s["paths"]["processed_dir"])
     out.mkdir(parents=True, exist_ok=True)
+    if without_rwzi and (out / "rwzi_effluent.parquet").exists():
+        raise FileExistsError("--without-rwzi cannot leave an older rwzi_effluent.parquet in the output folder")
     manifest = {"synthetic": False, "run_at": datetime.now().isoformat(timespec="seconds"),
                 "generator": "python -m hydronet.pipeline", "inputs": {}, "outputs": {}, "checks": {}}
     for key in s["paths"]["raw_files"]:
+        if without_rwzi and key.startswith("rwzi_"):
+            continue
         p = io.raw_path(key)
         manifest["inputs"][key] = {"path": str(p.relative_to(repo_path("."))), "bytes": p.stat().st_size,
                                    "sha256_first_50MB" if p.stat().st_size > 50_000_000 else "sha256": _sha256(p)}
@@ -103,15 +108,18 @@ def run(skip_rwzi_scan: bool = False) -> dict:
     rejected_all.append(rej_h)
 
     # RWZI effluent
-    interim = repo_path(s["paths"]["interim_dir"]) / "rwzi_values_nl11.parquet"
-    if skip_rwzi_scan and not interim.exists():
-        raise FileNotFoundError(f"--skip-rwzi needs {interim}; run once without it")
-    vals = pressures.extract_agv_values(s["pressures"]["agv_installation_prefix"], interim, force=False)
-    eff, rej_e = pressures.build_effluent(vals, io.read_rwzi_table("rwzi_measurement_points"),
-                                          io.read_rwzi_table("rwzi_installations"))
-    _write(eff, "rwzi_effluent.parquet", out, manifest, rows_in=len(eff) + len(rej_e), rejected=rej_e)
-    manifest["checks"]["rwzi_agv_rows"] = int(len(vals))
-    rejected_all.append(rej_e)
+    if without_rwzi:
+        manifest["checks"]["rwzi_status"] = "not built (--without-rwzi)"
+    else:
+        interim = repo_path(s["paths"]["interim_dir"]) / "rwzi_values_nl11.parquet"
+        if skip_rwzi_scan and not interim.exists():
+            raise FileNotFoundError(f"--skip-rwzi needs {interim}; run once without it")
+        vals = pressures.extract_agv_values(s["pressures"]["agv_installation_prefix"], interim, force=False)
+        eff, rej_e = pressures.build_effluent(vals, io.read_rwzi_table("rwzi_measurement_points"),
+                                              io.read_rwzi_table("rwzi_installations"))
+        _write(eff, "rwzi_effluent.parquet", out, manifest, rows_in=len(eff) + len(rej_e), rejected=rej_e)
+        manifest["checks"]["rwzi_agv_rows"] = int(len(vals))
+        rejected_all.append(rej_e)
 
     rej = pd.concat([r for r in rejected_all + [pd.DataFrame(cov_issues)] if len(r)], ignore_index=True) \
         if any(len(r) for r in rejected_all + [pd.DataFrame(cov_issues)]) \
@@ -128,9 +136,12 @@ def run(skip_rwzi_scan: bool = False) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--skip-rwzi", action="store_true", help="require and re-use the cached RWZI extract")
+    ap.add_argument("--without-rwzi", action="store_true", help="build other real outputs without RWZI files")
     a = ap.parse_args()
+    if a.skip_rwzi and a.without_rwzi:
+        ap.error("--skip-rwzi and --without-rwzi cannot be combined")
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s", datefmt="%H:%M:%S")
-    run(skip_rwzi_scan=a.skip_rwzi)
+    run(skip_rwzi_scan=a.skip_rwzi, without_rwzi=a.without_rwzi)
 
 
 if __name__ == "__main__":

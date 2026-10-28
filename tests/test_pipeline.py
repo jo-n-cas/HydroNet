@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from hydronet import cleaning, hydrology, io, pressures
+from hydronet import cleaning, hydrology, io, pipeline, pressures
 from hydronet.config import repo_path
 
 
@@ -68,6 +68,14 @@ def test_build_effluent_keeps_effluent_only_and_rejects_bad_values():
 
 
 PROCESSED = repo_path("data/processed")
+
+
+def test_partial_run_rejects_stale_rwzi_output(tmp_path, monkeypatch):
+    (tmp_path / "rwzi_effluent.parquet").touch()
+    monkeypatch.setattr(pipeline, "load_settings", lambda: {"paths": {"processed_dir": "data/processed"}})
+    monkeypatch.setattr(pipeline, "repo_path", lambda _: tmp_path)
+    with pytest.raises(FileExistsError, match="older rwzi_effluent"):
+        pipeline.run(without_rwzi=True)
 
 
 @pytest.mark.skipif(not (PROCESSED / "pipeline_manifest.json").exists(), reason="pipeline not run on real data")
