@@ -1,4 +1,8 @@
 csv/
+Flags/
+data/
+amstel_subset/
+
 .DS_Store
 __pycache__/
 
