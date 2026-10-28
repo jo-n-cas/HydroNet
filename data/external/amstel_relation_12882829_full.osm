@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1454012 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="46367195" visible="true" version="8" changeset="48176017" timestamp="2017-04-26T21:31:11Z" user="paulbe" uid="48448" lat="52.3673285" lon="4.8984665"/>
+ <node id="60740166" visible="true" version="50" changeset="7250815" timestamp="2011-02-10T23:31:39Z" user="paulbe" uid="48448" lat="52.3657805" lon="4.9012072"/>
+ <node id="60740168" visible="true" version="41" changeset="61154477" timestamp="2018-07-29T01:27:40Z" user="mnegrini" uid="1895218" lat="52.3628080" lon="4.9027595"/>
+ <node id="178249886" visible="true" version="21" changeset="15209360" timestamp="2013-03-01T13:08:10Z" user="gvb" uid="221961" lat="52.3430262" lon="4.9145797"/>
+ <node id="178249887" visible="true" version="20" changeset="786197" timestamp="2009-01-14T00:06:36Z" user="paulbe" uid="48448" lat="52.3452952" lon="4.9133649"/>
+ <node id="178249893" visible="true" version="22" changeset="95315755" timestamp="2020-12-04T21:06:24Z" user="Peter Elderson" uid="7103674" lat="52.3500738" lon="4.9110690">
+  <tag k="expected_rmn_route_relations" v="3"/>
+  <tag k="network:type" v="node_network"/>
+  <tag k="rmn_ref" v="9"/>
+ </node>
+ <node id="178249896" visible="true" version="21" changeset="61154477" timestamp="2018-07-29T01:27:39Z" user="mnegrini" uid="1895218" lat="52.3544075" lon="4.9072753"/>
+ <node id="178249899" visible="true" version="26" changeset="139617912" timestamp="2023-08-08T14:59:47Z" user="A67-A67" uid="553736" lat="52.3561612" lon="4.9060340">
+  <tag k="phone:NL" v="0900 9394"/>
+  <tag k="river:waterway_distance" v="3.148"/>
+  <tag k="seamark:bridge:category" v="opening"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="3.8"/>
+  <tag k="seamark:bridge:clearance_width" v="13.7"/>
+  <tag k="seamark:name" v="Nieuwe Amstelbrug"/>
+  <tag k="seamark:source" v="https://www.vaarweginformatie.nl/frp/main/#/geo/detail/BRIDGE/40929"/>
+  <tag k="seamark:type" v="bridge"/>
+  <tag k="vhf" v="69"/>
+ </node>
+ <node id="178249904" visible="true" version="48" changeset="61154477" timestamp="2018-07-29T01:27:38Z" user="mnegrini" uid="1895218" lat="52.3591671" lon="4.9046710"/>
+ <node id="178249906" visible="true" version="47" changeset="7250815" timestamp="2011-02-10T23:31:39Z" user="paulbe" uid="48448" lat="52.3644790" lon="4.9018920"/>
+ <node id="178249915" visible="true" version="27" changeset="4669086" timestamp="2010-05-11T14:37:57Z" user="paulbe" uid="48448" lat="52.3671878" lon="4.8990834"/>
+ <node id="178249922" visible="true" version="34" changeset="48176017" timestamp="2017-04-26T21:43:59Z" user="paulbe" uid="48448" lat="52.3674100" lon="4.8972449"/>
+ <node id="311319542" visible="true" version="38" changeset="42758504" timestamp="2016-10-09T17:01:12Z" user="paulbe" uid="48448" lat="52.3673606" lon="4.8939945"/>
+ <node id="324023636" visible="true" version="31" changeset="6588137" timestamp="2010-12-08T18:51:58Z" user="paulbe" uid="48448" lat="52.3674473" lon="4.8955393"/>
+ <node id="324828721" visible="true" version="20" changeset="4669086" timestamp="2010-05-11T14:37:59Z" user="paulbe" uid="48448" lat="52.3672590" lon="4.8946846"/>
+ <node id="331957294" visible="true" version="8" changeset="786197" timestamp="2009-01-14T00:06:36Z" user="paulbe" uid="48448" lat="52.3521446" lon="4.9097558"/>
+ <node id="331957630" visible="true" version="6" changeset="786197" timestamp="2009-01-14T00:06:36Z" user="paulbe" uid="48448" lat="52.3459842" lon="4.9133607"/>
+ <node id="331958720" visible="true" version="5" changeset="61154477" timestamp="2018-07-29T01:27:39Z" user="mnegrini" uid="1895218" lat="52.3549114" lon="4.9068332"/>
+ <node id="331960261" visible="true" version="7" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3635045" lon="4.9024089"/>
+ <node id="331960262" visible="true" version="7" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3636588" lon="4.9023302"/>
+ <node id="331960285" visible="true" version="6" changeset="5466448" timestamp="2010-08-11T20:08:56Z" user="paulbe" uid="48448" lat="52.3616382" lon="4.9033221"/>
+ <node id="331960355" visible="true" version="8" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3601271" lon="4.9040616"/>
+ <node id="331960356" visible="true" version="7" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3605021" lon="4.9038703">
+  <tag k="river:waterway_distance" v="2.660"/>
+  <tag k="seamark:bridge:category" v="opening"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="3.77"/>
+  <tag k="seamark:bridge:clearance_height_open" v="7.95"/>
+  <tag k="seamark:bridge:clearance_width" v="8.2"/>
+  <tag k="seamark:name" v="Hogesluisbrug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="331960543" visible="true" version="6" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3662138" lon="4.9009762"/>
+ <node id="420889342" visible="true" version="5" changeset="136081204" timestamp="2023-05-14T11:26:08Z" user="IIVQ" uid="2337040" lat="52.2987058" lon="4.8989771"/>
+ <node id="605290048" visible="true" version="3" changeset="26673372" timestamp="2014-11-09T20:15:35Z" user="mnegrini" uid="1895218" lat="52.3672441" lon="4.8943157"/>
+ <node id="784035866" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:44Z" user="paulbe" uid="48448" lat="52.3362945" lon="4.9069906"/>
+ <node id="784035869" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:44Z" user="paulbe" uid="48448" lat="52.3377957" lon="4.9075593"/>
+ <node id="784035872" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:44Z" user="paulbe" uid="48448" lat="52.3382743" lon="4.9081493"/>
+ <node id="784035874" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:45Z" user="paulbe" uid="48448" lat="52.3386479" lon="4.9091900"/>
+ <node id="784035876" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:45Z" user="paulbe" uid="48448" lat="52.3388577" lon="4.9097158"/>
+ <node id="784035878" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3395040" lon="4.9123793">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="25"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="784035881" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:29:45Z" user="paulbe" uid="48448" lat="52.3402015" lon="4.9140609"/>
+ <node id="784035884" visible="true" version="2" changeset="5288347" timestamp="2010-07-22T15:29:42Z" user="paulbe" uid="48448" lat="52.3411690" lon="4.9152638"/>
+ <node id="784035887" visible="true" version="6" changeset="95315755" timestamp="2020-12-04T21:06:27Z" user="Peter Elderson" uid="7103674" lat="52.3419526" lon="4.9153538">
+  <tag k="expected_rmn_route_relations" v="3"/>
+  <tag k="network:type" v="node_network"/>
+  <tag k="rmn_ref" v="10"/>
+ </node>
+ <node id="784051276" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:43:19Z" user="paulbe" uid="48448" lat="52.3358989" lon="4.9067544"/>
+ <node id="784054307" visible="true" version="1" changeset="5058141" timestamp="2010-06-23T11:46:11Z" user="paulbe" uid="48448" lat="52.3347671" lon="4.9060787"/>
+ <node id="839907830" visible="true" version="2" changeset="7327356" timestamp="2011-02-18T22:47:15Z" user="fsteggink" uid="37993" lat="52.3016438" lon="4.9006962"/>
+ <node id="839907835" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:58Z" user="paulbe" uid="48448" lat="52.3034785" lon="4.9038097"/>
+ <node id="839907845" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:58Z" user="paulbe" uid="48448" lat="52.3043969" lon="4.9052474"/>
+ <node id="839907848" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3050595" lon="4.9061057"/>
+ <node id="839907852" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3054466" lon="4.9066743"/>
+ <node id="839907856" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3064634" lon="4.9076936"/>
+ <node id="839907860" visible="true" version="2" changeset="5489907" timestamp="2010-08-14T12:04:19Z" user="Sec" uid="15212" lat="52.3070591" lon="4.9078726"/>
+ <node id="839907864" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3075261" lon="4.9077472"/>
+ <node id="839907868" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3082214" lon="4.9071464"/>
+ <node id="839907869" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3093169" lon="4.9060843"/>
+ <node id="839907871" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3102811" lon="4.9054513"/>
+ <node id="839907872" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3111076" lon="4.9052367"/>
+ <node id="839907874" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3118423" lon="4.9053010"/>
+ <node id="839907876" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3122620" lon="4.9054083"/>
+ <node id="839907879" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3131082" lon="4.9058804"/>
+ <node id="839907882" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3142953" lon="4.9061057"/>
+ <node id="839907886" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3152398" lon="4.9057302"/>
+ <node id="839907889" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3160203" lon="4.9055693"/>
+ <node id="839907893" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3163810" lon="4.9058268"/>
+ <node id="839907894" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3169516" lon="4.9070498"/>
+ <node id="839907897" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:35:59Z" user="paulbe" uid="48448" lat="52.3173910" lon="4.9084875"/>
+ <node id="839907898" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3177458" lon="4.9089112"/>
+ <node id="839907902" visible="true" version="2" changeset="45818707" timestamp="2017-02-05T00:53:15Z" user="paulbe" uid="48448" lat="52.3185539" lon="4.9092018"/>
+ <node id="839907905" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3190439" lon="4.9087271"/>
+ <node id="839907920" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3194503" lon="4.9075541"/>
+ <node id="839907923" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3201717" lon="4.9051723"/>
+ <node id="839907927" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3206635" lon="4.9038848"/>
+ <node id="839907932" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3211960" lon="4.9025280">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="22"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="839907937" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3214308" lon="4.9011061"/>
+ <node id="839907943" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3214701" lon="4.8993036"/>
+ <node id="839907948" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:00Z" user="paulbe" uid="48448" lat="52.3216866" lon="4.8978230"/>
+ <node id="839907951" visible="true" version="2" changeset="42958490" timestamp="2016-10-17T12:20:50Z" user="paulbe" uid="48448" lat="52.3219888" lon="4.8969037"/>
+ <node id="839907953" visible="true" version="2" changeset="42958490" timestamp="2016-10-17T12:20:51Z" user="paulbe" uid="48448" lat="52.3225430" lon="4.8960744"/>
+ <node id="839907991" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3233128" lon="4.8954949"/>
+ <node id="839907995" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3240473" lon="4.8953125"/>
+ <node id="839908020" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3251030" lon="4.8955915"/>
+ <node id="839908021" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3277455" lon="4.8971471"/>
+ <node id="839908023" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3291618" lon="4.8984239"/>
+ <node id="839908028" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3300272" lon="4.8990569"/>
+ <node id="839908035" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:01Z" user="paulbe" uid="48448" lat="52.3306829" lon="4.8990032"/>
+ <node id="839908045" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:02Z" user="paulbe" uid="48448" lat="52.3318106" lon="4.8983917"/>
+ <node id="839908052" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:02Z" user="paulbe" uid="48448" lat="52.3322367" lon="4.8984239"/>
+ <node id="839908058" visible="true" version="2" changeset="76864630" timestamp="2019-11-10T10:49:58Z" user="OttoR" uid="4123522" lat="52.3332092" lon="4.8994840"/>
+ <node id="839908064" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:02Z" user="paulbe" uid="48448" lat="52.3334299" lon="4.9006984"/>
+ <node id="839908067" visible="true" version="2" changeset="14518796" timestamp="2013-01-03T21:46:08Z" user="paulbe" uid="48448" lat="52.3334024" lon="4.9022423"/>
+ <node id="839908071" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:02Z" user="paulbe" uid="48448" lat="52.3334693" lon="4.9037883"/>
+ <node id="839908074" visible="true" version="1" changeset="5361370" timestamp="2010-07-31T10:36:02Z" user="paulbe" uid="48448" lat="52.3339020" lon="4.9051294"/>
+ <node id="855290074" visible="true" version="3" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3618892" lon="4.9033318"/>
+ <node id="1116759181" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:43Z" user="fsteggink" uid="37993" lat="52.2621637" lon="4.8799192"/>
+ <node id="1116759196" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:43Z" user="fsteggink" uid="37993" lat="52.2608707" lon="4.8735305"/>
+ <node id="1116759215" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:45Z" user="fsteggink" uid="37993" lat="52.2551179" lon="4.8709412"/>
+ <node id="1116759234" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:46Z" user="fsteggink" uid="37993" lat="52.2617212" lon="4.8791603"/>
+ <node id="1116759255" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:46Z" user="fsteggink" uid="37993" lat="52.2604628" lon="4.8731767"/>
+ <node id="1116759274" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:47Z" user="fsteggink" uid="37993" lat="52.2593989" lon="4.8731665"/>
+ <node id="1116759294" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:48Z" user="fsteggink" uid="37993" lat="52.2543772" lon="4.8703977"/>
+ <node id="1116759314" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:48Z" user="fsteggink" uid="37993" lat="52.2613540" lon="4.8781861"/>
+ <node id="1116759355" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:49Z" user="fsteggink" uid="37993" lat="52.2599355" lon="4.8730280"/>
+ <node id="1116759397" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:50Z" user="fsteggink" uid="37993" lat="52.2584981" lon="4.8736587"/>
+ <node id="1116759462" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:51Z" user="fsteggink" uid="37993" lat="52.2535925" lon="4.8703259"/>
+ <node id="1116759489" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:52Z" user="fsteggink" uid="37993" lat="52.2611783" lon="4.8765402"/>
+ <node id="1116759531" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:54Z" user="fsteggink" uid="37993" lat="52.2579144" lon="4.8736023"/>
+ <node id="1116759570" visible="true" version="2" changeset="95346776" timestamp="2020-12-05T20:01:56Z" user="Peter Elderson" uid="7103674" lat="52.2532535" lon="4.8700285">
+  <tag k="expected_rmn_route_relations" v="3"/>
+  <tag k="network:type" v="node_network"/>
+  <tag k="rmn_ref" v="18"/>
+ </node>
+ <node id="1116759606" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:56Z" user="fsteggink" uid="37993" lat="52.2610653" lon="4.8741765"/>
+ <node id="1116759668" visible="true" version="1" changeset="7060675" timestamp="2011-01-23T12:41:57Z" user="fsteggink" uid="37993" lat="52.2572082" lon="4.8731562"/>
+ <node id="1160148610" visible="true" version="2" changeset="45885713" timestamp="2017-02-07T13:29:28Z" user="paulbe" uid="48448" lat="52.2889370" lon="4.8872996"/>
+ <node id="1160148611" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:30Z" user="fsteggink" uid="37993" lat="52.2790246" lon="4.8788061"/>
+ <node id="1160148640" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:31Z" user="fsteggink" uid="37993" lat="52.2647781" lon="4.8823179"/>
+ <node id="1160148647" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:31Z" user="fsteggink" uid="37993" lat="52.3007964" lon="4.8993250"/>
+ <node id="1160148652" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:31Z" user="fsteggink" uid="37993" lat="52.2796824" lon="4.8792223"/>
+ <node id="1160148677" visible="true" version="2" changeset="26753630" timestamp="2014-11-13T11:11:11Z" user="paulbe" uid="48448" lat="52.2865659" lon="4.8859400"/>
+ <node id="1160148686" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:32Z" user="fsteggink" uid="37993" lat="52.2950894" lon="4.8925154"/>
+ <node id="1160148696" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:33Z" user="fsteggink" uid="37993" lat="52.2981398" lon="4.8996458"/>
+ <node id="1160148712" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:33Z" user="fsteggink" uid="37993" lat="52.2716021" lon="4.8815808"/>
+ <node id="1160148726" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:33Z" user="fsteggink" uid="37993" lat="52.2918331" lon="4.8911020"/>
+ <node id="1160148740" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:34Z" user="fsteggink" uid="37993" lat="52.2637804" lon="4.8822138"/>
+ <node id="1160148763" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:34Z" user="fsteggink" uid="37993" lat="52.2914088" lon="4.8908159"/>
+ <node id="1160148771" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:35Z" user="fsteggink" uid="37993" lat="52.2769131" lon="4.8797772"/>
+ <node id="1160148804" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:36Z" user="fsteggink" uid="37993" lat="52.2956568" lon="4.9000419"/>
+ <node id="1160148805" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:36Z" user="fsteggink" uid="37993" lat="52.2678294" lon="4.8796905"/>
+ <node id="1160148814" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:36Z" user="fsteggink" uid="37993" lat="52.3001601" lon="4.8986487"/>
+ <node id="1160148820" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:36Z" user="fsteggink" uid="37993" lat="52.2806479" lon="4.8802108"/>
+ <node id="1160148833" visible="true" version="2" changeset="26753630" timestamp="2014-11-13T11:11:11Z" user="paulbe" uid="48448" lat="52.2850631" lon="4.8848989"/>
+ <node id="1160148859" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:37Z" user="fsteggink" uid="37993" lat="52.2749448" lon="4.8816328"/>
+ <node id="1160148873" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:37Z" user="fsteggink" uid="37993" lat="52.2939174" lon="4.8910240"/>
+ <node id="1160148908" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:38Z" user="fsteggink" uid="37993" lat="52.2910641" lon="4.8900615"/>
+ <node id="1160148909" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:38Z" user="fsteggink" uid="37993" lat="52.2653406" lon="4.8816935"/>
+ <node id="1160148915" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:39Z" user="fsteggink" uid="37993" lat="52.2897753" lon="4.8870960"/>
+ <node id="1160148916" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:39Z" user="fsteggink" uid="37993" lat="52.2776665" lon="4.8791442"/>
+ <node id="1160148930" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:40Z" user="fsteggink" uid="37993" lat="52.2948560" lon="4.8919691"/>
+ <node id="1160148932" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:40Z" user="fsteggink" uid="37993" lat="52.2684980" lon="4.8801934"/>
+ <node id="1160148938" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:40Z" user="fsteggink" uid="37993" lat="52.2973284" lon="4.9008858"/>
+ <node id="1160148950" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:40Z" user="fsteggink" uid="37993" lat="52.2720213" lon="4.8816328"/>
+ <node id="1160148963" visible="true" version="2" changeset="26753630" timestamp="2014-11-13T11:11:12Z" user="paulbe" uid="48448" lat="52.2857396" lon="4.8850758"/>
+ <node id="1160148989" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:41Z" user="fsteggink" uid="37993" lat="52.2755549" lon="4.8813033"/>
+ <node id="1160148994" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:41Z" user="fsteggink" uid="37993" lat="52.2935143" lon="4.8909113"/>
+ <node id="1160149008" visible="true" version="2" changeset="95341794" timestamp="2020-12-05T17:14:10Z" user="Peter Elderson" uid="7103674" lat="52.2958874" lon="4.9007782">
+  <tag k="expected_rmn_route_relations" v="3"/>
+  <tag k="network:type" v="node_network"/>
+  <tag k="rmn_ref" v="19"/>
+ </node>
+ <node id="1160149033" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:42Z" user="fsteggink" uid="37993" lat="52.2956462" lon="4.8988193"/>
+ <node id="1160149035" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:42Z" user="fsteggink" uid="37993" lat="52.2663595" lon="4.8800807"/>
+ <node id="1160149053" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:43Z" user="fsteggink" uid="37993" lat="52.2997147" lon="4.8985013"/>
+ <node id="1160149055" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:43Z" user="fsteggink" uid="37993" lat="52.2894199" lon="4.8870440"/>
+ <node id="1160149057" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:43Z" user="fsteggink" uid="37993" lat="52.2835019" lon="4.8839914"/>
+ <node id="1160149059" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:43Z" user="fsteggink" uid="37993" lat="52.2963103" lon="4.9013107"/>
+ <node id="1160149083" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:44Z" user="fsteggink" uid="37993" lat="52.2943946" lon="4.8913448"/>
+ <node id="1160149085" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:44Z" user="fsteggink" uid="37993" lat="52.2668955" lon="4.8796038"/>
+ <node id="1160149098" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:44Z" user="fsteggink" uid="37993" lat="52.2968830" lon="4.9013107"/>
+ <node id="1160149111" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:44Z" user="fsteggink" uid="37993" lat="52.2729074" lon="4.8811993"/>
+ <node id="1160149153" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:45Z" user="fsteggink" uid="37993" lat="52.2734698" lon="4.8812166"/>
+ <node id="1160149159" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:45Z" user="fsteggink" uid="37993" lat="52.2907087" lon="4.8885441"/>
+ <node id="1160149178" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:46Z" user="fsteggink" uid="37993" lat="52.2784622" lon="4.8788061"/>
+ <node id="1160149203" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:46Z" user="fsteggink" uid="37993" lat="52.2953970" lon="4.8959839"/>
+ <node id="1160149204" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:46Z" user="fsteggink" uid="37993" lat="52.2642315" lon="4.8824739"/>
+ <node id="1160149227" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:47Z" user="fsteggink" uid="37993" lat="52.2993329" lon="4.8985533"/>
+ <node id="1160149229" visible="true" version="2" changeset="26753630" timestamp="2014-11-13T11:11:11Z" user="paulbe" uid="48448" lat="52.2841757" lon="4.8845743"/>
+ <node id="1160149247" visible="true" version="2" changeset="26753630" timestamp="2014-11-13T11:11:11Z" user="paulbe" uid="48448" lat="52.2862281" lon="4.8854740"/>
+ <node id="1160149267" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:48Z" user="fsteggink" uid="37993" lat="52.2952697" lon="4.8934692"/>
+ <node id="1160149268" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:48Z" user="fsteggink" uid="37993" lat="52.2672881" lon="4.8794651"/>
+ <node id="1160149281" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:48Z" user="fsteggink" uid="37993" lat="52.2988609" lon="4.8988568"/>
+ <node id="1160149289" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:48Z" user="fsteggink" uid="37993" lat="52.2702703" lon="4.8807310"/>
+ <node id="1160149304" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:49Z" user="fsteggink" uid="37993" lat="52.2930052" lon="4.8909633"/>
+ <node id="1160149342" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:49Z" user="fsteggink" uid="37993" lat="52.2743505" lon="4.8816242"/>
+ <node id="1160149359" visible="true" version="1" changeset="7327356" timestamp="2011-02-18T22:45:50Z" user="fsteggink" uid="37993" lat="52.2902632" lon="4.8875642"/>
+ <node id="1162090923" visible="true" version="2" changeset="8190270" timestamp="2011-05-19T14:25:20Z" user="paulbe" uid="48448" lat="52.3482290" lon="4.9121846"/>
+ <node id="1366780223" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2725918" lon="4.8813541">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="15"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="1366780234" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2592728" lon="4.8732179">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="13"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="1366780296" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2808684" lon="4.8804814">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="16"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="1366780334" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3269002" lon="4.8966519">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="23"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="2077512475" visible="true" version="2" changeset="76864630" timestamp="2019-11-10T10:49:58Z" user="OttoR" uid="4123522" lat="52.3327477" lon="4.8986626">
+  <tag k="seamark:bridge:category" v="fixed"/>
+  <tag k="seamark:bridge:clearance_height" v="6.2"/>
+  <tag k="seamark:name" v="Rozenoordbrug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="2077512476" visible="true" version="1" changeset="14355180" timestamp="2012-12-21T14:18:40Z" user="kannix" uid="75339" lat="52.3387546" lon="4.9094575">
+  <tag k="seamark:bridge:category" v="fixed"/>
+  <tag k="seamark:bridge:clearance_height" v="5.8"/>
+  <tag k="seamark:name" v="Utrechtse Brug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="2077514167" visible="true" version="4" changeset="86572969" timestamp="2020-06-12T14:52:58Z" user="AdVerburg" uid="2831457" lat="52.2945805" lon="4.8915963">
+  <tag k="river:waterway_distance" v="12.48"/>
+  <tag k="seamark:bridge:category" v="fixed"/>
+  <tag k="seamark:bridge:clearance_height" v="5.8"/>
+  <tag k="seamark:bridge:clearance_width" v="34"/>
+  <tag k="seamark:name" v="Amstelveen, brug in de A-9"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="2094064403" visible="true" version="1" changeset="14518796" timestamp="2013-01-03T21:45:59Z" user="paulbe" uid="48448" lat="52.3333250" lon="4.9000421"/>
+ <node id="2605996800" visible="true" version="6" changeset="136982670" timestamp="2023-06-05T17:25:37Z" user="IIVQ" uid="2337040" lat="52.2985792" lon="4.8990936">
+  <tag k="note" v="Nieuwe doorvaartbreedte/hoogte n.a.v. een mail van serviceputn@noord-holland.nl"/>
+  <tag k="phone" v="+31 20 496 1456"/>
+  <tag k="river:waterway_distance" v="11.457"/>
+  <tag k="seamark:bridge:category" v="opening"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="3"/>
+  <tag k="seamark:bridge:clearance_width" v="11.5"/>
+  <tag k="seamark:name" v="Brug Ouderkerk (in de N522)"/>
+  <tag k="seamark:type" v="bridge"/>
+  <tag k="vhf" v="20"/>
+ </node>
+ <node id="2605998684" visible="true" version="1" changeset="19764579" timestamp="2014-01-02T11:41:32Z" user="kannix" uid="75339" lat="52.3394097" lon="4.9120288"/>
+ <node id="2606003197" visible="true" version="3" changeset="149882319" timestamp="2024-04-11T21:02:30Z" user="OttoR" uid="4123522" lat="52.3473577" lon="4.9127425">
+  <tag k="river:waterway_distance" v="4.235"/>
+  <tag k="seamark:bridge:category" v="opening"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="3.71"/>
+  <tag k="seamark:bridge:clearance_width" v="11.90"/>
+  <tag k="seamark:name" v="Berlagebrug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="2606003203" visible="true" version="5" changeset="139617912" timestamp="2023-08-08T14:59:47Z" user="A67-A67" uid="553736" lat="52.3589043" lon="4.9048025">
+  <tag k="phone:NL" v="0900 9394"/>
+  <tag k="river:waterway_distance" v="2.831"/>
+  <tag k="seamark:bridge:category" v="opening"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="4.6"/>
+  <tag k="seamark:bridge:clearance_width" v="11.9"/>
+  <tag k="seamark:name" v="Torontobrug"/>
+  <tag k="seamark:source" v="https://www.vaarweginformatie.nl/frp/main/#/geo/detail/BRIDGE/32953"/>
+  <tag k="seamark:type" v="bridge"/>
+  <tag k="vhf" v="69"/>
+ </node>
+ <node id="2606003209" visible="true" version="3" changeset="62890629" timestamp="2018-09-24T18:31:12Z" user="mapper999" uid="165061" lat="52.3635837" lon="4.9023731">
+  <tag k="river:waterway_distance" v="2.285"/>
+  <tag k="seamark:bridge:category" v="bascule"/>
+  <tag k="seamark:bridge:clearance_height_closed" v="2.9"/>
+  <tag k="seamark:bridge:clearance_width" v="8.46"/>
+  <tag k="seamark:name" v="Magere Brug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="2661213466" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3618169" lon="4.9029707"/>
+ <node id="2661213467" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3618486" lon="4.9031377"/>
+ <node id="2661213469" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3619206" lon="4.9035002"/>
+ <node id="2661213470" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3624959" lon="4.9026269"/>
+ <node id="2661213471" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3625221" lon="4.9027949"/>
+ <node id="2661213472" visible="true" version="3" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3625634" lon="4.9030080"/>
+ <node id="2661213473" visible="true" version="4" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3625912" lon="4.9031748"/>
+ <node id="3177724801" visible="true" version="1" changeset="26673372" timestamp="2014-11-09T20:15:31Z" user="mnegrini" uid="1895218" lat="52.3672798" lon="4.8941756"/>
+ <node id="3177724802" visible="true" version="1" changeset="26673372" timestamp="2014-11-09T20:15:31Z" user="mnegrini" uid="1895218" lat="52.3672356" lon="4.8944932"/>
+ <node id="3177724804" visible="true" version="2" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3666216" lon="4.9006458"/>
+ <node id="3184340447" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2872713" lon="4.8895273"/>
+ <node id="3184340451" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2886547" lon="4.8885187"/>
+ <node id="3184340455" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2887321" lon="4.8882181"/>
+ <node id="3184340456" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2868119" lon="4.8881031"/>
+ <node id="3184340458" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2882853" lon="4.8893396"/>
+ <node id="3184343461" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2867282" lon="4.8870302"/>
+ <node id="3184343462" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2878734" lon="4.8897097"/>
+ <node id="3184343464" visible="true" version="3" changeset="124877899" timestamp="2022-08-14T08:27:50Z" user="malcolmh" uid="128186" lat="52.2875666" lon="4.8897151"/>
+ <node id="3184343467" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2881113" lon="4.8895890"/>
+ <node id="3184343468" visible="true" version="1" changeset="26753630" timestamp="2014-11-13T11:11:01Z" user="paulbe" uid="48448" lat="52.2869382" lon="4.8888165"/>
+ <node id="3575001137" visible="true" version="3" changeset="85186010" timestamp="2020-05-14T08:07:40Z" user="AdVerburg" uid="2831457" lat="52.3663531" lon="4.9008916">
+  <tag k="seamark:bridge:category" v="fixed"/>
+  <tag k="seamark:bridge:clearance_height" v="3"/>
+  <tag k="seamark:bridge:clearance_width" v="14"/>
+  <tag k="seamark:name" v="Blauwbrug"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="4451809335" visible="true" version="1" changeset="42958490" timestamp="2016-10-17T12:20:48Z" user="paulbe" uid="48448" lat="52.3228615" lon="4.8958105"/>
+ <node id="4521541053" visible="true" version="2" changeset="149882319" timestamp="2024-04-11T21:02:30Z" user="OttoR" uid="4123522" lat="52.3471924" lon="4.9128051"/>
+ <node id="4521541054" visible="true" version="3" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3475036" lon="4.9126888"/>
+ <node id="4525548102" visible="true" version="2" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3155869" lon="4.9055538">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="21"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="5124049227" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3620026" lon="4.9030545"/>
+ <node id="5124049228" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3619605" lon="4.9030769"/>
+ <node id="5124049229" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3620466" lon="4.9032657"/>
+ <node id="5124049230" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3619976" lon="4.9032910"/>
+ <node id="5124049231" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3625284" lon="4.9032064"/>
+ <node id="5124049232" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3624798" lon="4.9032303"/>
+ <node id="5124049233" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3620807" lon="4.9034310"/>
+ <node id="5124049234" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3620276" lon="4.9034555"/>
+ <node id="5124049235" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3624231" lon="4.9026640"/>
+ <node id="5124049236" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3623782" lon="4.9026853"/>
+ <node id="5124049237" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3619817" lon="4.9028869"/>
+ <node id="5124049238" visible="true" version="2" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3619258" lon="4.9029153"/>
+ <node id="5793095208" visible="true" version="1" changeset="61154477" timestamp="2018-07-29T01:27:36Z" user="mnegrini" uid="1895218" lat="52.3554085" lon="4.9064658"/>
+ <node id="5927316660" visible="true" version="2" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3665108" lon="4.9007830"/>
+ <node id="6961558618" visible="true" version="1" changeset="76864630" timestamp="2019-11-10T10:49:58Z" user="OttoR" uid="4123522" lat="52.3330296" lon="4.8990113"/>
+ <node id="6961558619" visible="true" version="1" changeset="76864630" timestamp="2019-11-10T10:49:58Z" user="OttoR" uid="4123522" lat="52.3325025" lon="4.8985055"/>
+ <node id="7457075643" visible="true" version="1" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3624972" lon="4.9030389"/>
+ <node id="7457075647" visible="true" version="1" changeset="84253395" timestamp="2020-04-28T09:16:54Z" user="AdVerburg" uid="2831457" lat="52.3624598" lon="4.9028263"/>
+ <node id="7673198458" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3334080" lon="4.9029880">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="24"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="7673198459" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3213571" lon="4.9018133"/>
+ <node id="7673198460" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3188249" lon="4.9090384"/>
+ <node id="7673198461" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3181561" lon="4.9092007"/>
+ <node id="7673198462" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3167123" lon="4.9064049"/>
+ <node id="7673198463" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3158163" lon="4.9055183"/>
+ <node id="7673198464" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.3068273" lon="4.9078462">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="20"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="7673198465" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2995565" lon="4.8985162">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="19"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="7673198466" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2953061" lon="4.8941447">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="18"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="7673198467" visible="true" version="1" changeset="87390382" timestamp="2020-07-01T09:21:47Z" user="AdVerburg" uid="2831457" lat="52.2643598" lon="4.8824697">
+  <tag k="seamark:distance_mark:category" v="not_installed"/>
+  <tag k="seamark:distance_mark:distance" v="14"/>
+  <tag k="seamark:distance_mark:units" v="kilometres"/>
+  <tag k="seamark:source" v="https://geoservices.rijkswaterstaat.nl/apps/geoserver/nwb_vaarwegen/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=kilometermarkeringen&amp;outputFormat=csv"/>
+  <tag k="seamark:type" v="distance_mark"/>
+ </node>
+ <node id="8195221117" visible="true" version="1" changeset="95315755" timestamp="2020-12-04T21:05:56Z" user="Peter Elderson" uid="7103674" lat="52.3596598" lon="4.9043480">
+  <tag k="expected_rmn_route_relations" v="1"/>
+  <tag k="network:type" v="node_network"/>
+  <tag k="rmn_ref" v="8"/>
+ </node>
+ <node id="8197191639" visible="true" version="1" changeset="95344748" timestamp="2020-12-05T18:49:48Z" user="Peter Elderson" uid="7103674" lat="52.3415058" lon="4.9154360"/>
+ <node id="9909148838" visible="true" version="1" changeset="124040740" timestamp="2022-07-25T08:53:16Z" user="IIVQ" uid="2337040" lat="52.2773858" lon="4.8793801"/>
+ <node id="9909148840" visible="true" version="1" changeset="124040740" timestamp="2022-07-25T08:53:16Z" user="IIVQ" uid="2337040" lat="52.2591754" lon="4.8732733"/>
+ <node id="9909148846" visible="true" version="2" changeset="125111112" timestamp="2022-08-19T14:39:07Z" user="IIVQ" uid="2337040" lat="52.2886730" lon="4.8884477">
+  <tag k="seamark:bridge:category" v="fixed"/>
+  <tag k="seamark:bridge:clearance_height" v=".5"/>
+  <tag k="seamark:bridge:clearance_width" v="3"/>
+  <tag k="seamark:type" v="bridge"/>
+ </node>
+ <node id="10957922760" visible="true" version="1" changeset="136982670" timestamp="2023-06-05T17:25:37Z" user="IIVQ" uid="2337040" lat="52.2990413" lon="4.8987408"/>
+ <node id="10957922763" visible="true" version="1" changeset="136982670" timestamp="2023-06-05T17:25:37Z" user="IIVQ" uid="2337040" lat="52.2982861" lon="4.8994620"/>
+ <node id="11813499136" visible="true" version="1" changeset="149947067" timestamp="2024-04-13T11:24:36Z" user="OttoR" uid="4123522" lat="52.3478812" lon="4.9125378"/>
+ <node id="12238673172" visible="true" version="1" changeset="157678683" timestamp="2024-10-09T15:51:03Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3674367" lon="4.8960259"/>
+ <node id="12238673173" visible="true" version="1" changeset="157678683" timestamp="2024-10-09T15:51:03Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3674415" lon="4.8958066"/>
+ <node id="12242058694" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3560256" lon="4.9061118"/>
+ <node id="12242058695" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3563110" lon="4.9059667"/>
+ <node id="12242058696" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011" lat="52.3587222" lon="4.9048843"/>
+ <way id="30123973" visible="true" version="28" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960262"/>
+  <nd ref="178249906"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="name:uk" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="70385077" visible="true" version="30" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="1160149008"/>
+  <nd ref="1160149059"/>
+  <nd ref="1160149098"/>
+  <nd ref="1160148938"/>
+  <nd ref="1160148696"/>
+  <nd ref="10957922763"/>
+  <nd ref="2605996800"/>
+  <nd ref="420889342"/>
+  <nd ref="1160149281"/>
+  <nd ref="10957922760"/>
+  <nd ref="1160149227"/>
+  <nd ref="7673198465"/>
+  <nd ref="1160149053"/>
+  <nd ref="1160148814"/>
+  <nd ref="1160148647"/>
+  <nd ref="839907830"/>
+  <nd ref="839907835"/>
+  <nd ref="839907845"/>
+  <nd ref="839907848"/>
+  <nd ref="839907852"/>
+  <nd ref="839907856"/>
+  <nd ref="7673198464"/>
+  <nd ref="839907860"/>
+  <nd ref="839907864"/>
+  <nd ref="839907868"/>
+  <nd ref="839907869"/>
+  <nd ref="839907871"/>
+  <nd ref="839907872"/>
+  <nd ref="839907874"/>
+  <nd ref="839907876"/>
+  <nd ref="839907879"/>
+  <nd ref="839907882"/>
+  <nd ref="839907886"/>
+  <nd ref="4525548102"/>
+  <nd ref="7673198463"/>
+  <nd ref="839907889"/>
+  <nd ref="839907893"/>
+  <nd ref="7673198462"/>
+  <nd ref="839907894"/>
+  <nd ref="839907897"/>
+  <nd ref="839907898"/>
+  <nd ref="7673198461"/>
+  <nd ref="839907902"/>
+  <nd ref="7673198460"/>
+  <nd ref="839907905"/>
+  <nd ref="839907920"/>
+  <nd ref="839907923"/>
+  <nd ref="839907927"/>
+  <nd ref="839907932"/>
+  <nd ref="7673198459"/>
+  <nd ref="839907937"/>
+  <nd ref="839907943"/>
+  <nd ref="839907948"/>
+  <nd ref="839907951"/>
+  <nd ref="839907953"/>
+  <nd ref="4451809335"/>
+  <nd ref="839907991"/>
+  <nd ref="839907995"/>
+  <nd ref="839908020"/>
+  <nd ref="1366780334"/>
+  <nd ref="839908021"/>
+  <nd ref="839908023"/>
+  <nd ref="839908028"/>
+  <nd ref="839908035"/>
+  <nd ref="839908045"/>
+  <nd ref="839908052"/>
+  <nd ref="6961558619"/>
+  <nd ref="2077512475"/>
+  <nd ref="6961558618"/>
+  <nd ref="839908058"/>
+  <nd ref="2094064403"/>
+  <nd ref="839908064"/>
+  <nd ref="839908067"/>
+  <nd ref="7673198458"/>
+  <nd ref="839908071"/>
+  <nd ref="839908074"/>
+  <nd ref="784054307"/>
+  <nd ref="784051276"/>
+  <nd ref="784035866"/>
+  <nd ref="784035869"/>
+  <nd ref="784035872"/>
+  <nd ref="784035874"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="96361938" visible="true" version="15" changeset="139010124" timestamp="2023-07-25T21:56:21Z" user="Loop120" uid="10599582">
+  <nd ref="1116759570"/>
+  <nd ref="1116759462"/>
+  <nd ref="1116759294"/>
+  <nd ref="1116759215"/>
+  <nd ref="1116759668"/>
+  <nd ref="1116759531"/>
+  <nd ref="1116759397"/>
+  <nd ref="9909148840"/>
+  <nd ref="1366780234"/>
+  <nd ref="1116759274"/>
+  <nd ref="1116759355"/>
+  <nd ref="1116759255"/>
+  <nd ref="1116759196"/>
+  <nd ref="1116759606"/>
+  <nd ref="1116759489"/>
+  <nd ref="1116759314"/>
+  <nd ref="1116759234"/>
+  <nd ref="1116759181"/>
+  <nd ref="1160148740"/>
+  <nd ref="1160149204"/>
+  <nd ref="7673198467"/>
+  <nd ref="1160148640"/>
+  <nd ref="1160148909"/>
+  <nd ref="1160149035"/>
+  <nd ref="1160149085"/>
+  <nd ref="1160149268"/>
+  <nd ref="1160148805"/>
+  <nd ref="1160148932"/>
+  <nd ref="1160149289"/>
+  <nd ref="1160148712"/>
+  <nd ref="1160148950"/>
+  <nd ref="1366780223"/>
+  <nd ref="1160149111"/>
+  <nd ref="1160149153"/>
+  <nd ref="1160149342"/>
+  <nd ref="1160148859"/>
+  <nd ref="1160148989"/>
+  <nd ref="1160148771"/>
+  <nd ref="9909148838"/>
+  <nd ref="1160148916"/>
+  <nd ref="1160149178"/>
+  <nd ref="1160148611"/>
+  <nd ref="1160148652"/>
+  <nd ref="1160148820"/>
+  <nd ref="1366780296"/>
+  <nd ref="1160149057"/>
+  <nd ref="1160149229"/>
+  <nd ref="1160148833"/>
+  <nd ref="1160148963"/>
+  <nd ref="1160149247"/>
+  <nd ref="1160148677"/>
+  <tag k="alt_name" v="Amstel-Drechtkanaal"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="195582876" visible="true" version="18" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5927316660"/>
+  <nd ref="3177724804"/>
+  <nd ref="178249915"/>
+  <nd ref="46367195"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="0"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+  <tag k="wikidata" v="Q185405"/>
+  <tag k="wikipedia" v="nl:Amstel (rivier)"/>
+ </way>
+ <way id="195582877" visible="true" version="12" changeset="157678683" timestamp="2024-10-09T15:51:03Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="12238673173"/>
+  <nd ref="324023636"/>
+  <nd ref="324828721"/>
+  <nd ref="3177724802"/>
+  <nd ref="605290048"/>
+  <nd ref="3177724801"/>
+  <nd ref="311319542"/>
+  <tag k="boat" v="yes"/>
+  <tag k="canoe" v="yes"/>
+  <tag k="motorboat" v="yes"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="260595783" visible="true" version="12" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049235"/>
+  <nd ref="5124049236"/>
+  <nd ref="5124049237"/>
+  <nd ref="5124049238"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="lock" v="yes"/>
+  <tag k="lock_name" v="Amstelsluis"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+  <tag k="wikidata" v="Q15869955"/>
+  <tag k="wikipedia" v="nl:Amstelsluizen"/>
+ </way>
+ <way id="260595784" visible="true" version="11" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="7457075647"/>
+  <nd ref="5124049227"/>
+  <nd ref="5124049228"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="lock" v="yes"/>
+  <tag k="lock_name" v="Amstelsluis"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+  <tag k="wikidata" v="Q15869955"/>
+ </way>
+ <way id="260595785" visible="true" version="11" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049234"/>
+  <nd ref="5124049233"/>
+  <nd ref="5124049232"/>
+  <nd ref="5124049231"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="lock" v="yes"/>
+  <tag k="lock_name" v="Amstelsluis"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+  <tag k="wikidata" v="Q15869955"/>
+  <tag k="wikipedia" v="nl:Amstelsluizen"/>
+ </way>
+ <way id="312563296" visible="true" version="13" changeset="139010124" timestamp="2023-07-25T21:56:21Z" user="Loop120" uid="10599582">
+  <nd ref="1160148677"/>
+  <nd ref="3184343461"/>
+  <nd ref="3184340456"/>
+  <nd ref="3184343468"/>
+  <nd ref="3184340447"/>
+  <nd ref="3184343464"/>
+  <nd ref="3184343462"/>
+  <nd ref="3184343467"/>
+  <nd ref="3184340458"/>
+  <nd ref="3184340451"/>
+  <nd ref="9909148846"/>
+  <nd ref="3184340455"/>
+  <nd ref="1160148610"/>
+  <tag k="canoe" v="yes"/>
+  <tag k="depth" v=".8"/>
+  <tag k="depth:source" v="sounding, op ondiepste punt, diepste vaarweg"/>
+  <tag k="motorboat" v="yes"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="527004184" visible="true" version="11" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960355"/>
+  <nd ref="331960356"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="527004185" visible="true" version="5" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049228"/>
+  <nd ref="2661213467"/>
+  <nd ref="331960285"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="527004188" visible="true" version="5" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="60740168"/>
+  <nd ref="2661213470"/>
+  <nd ref="5124049235"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="527004189" visible="true" version="5" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049238"/>
+  <nd ref="2661213466"/>
+  <nd ref="331960285"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="527004190" visible="true" version="5" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049231"/>
+  <nd ref="2661213473"/>
+  <nd ref="60740168"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="527004191" visible="true" version="6" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960285"/>
+  <nd ref="2661213469"/>
+  <nd ref="5124049234"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="797334785" visible="true" version="9" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="7457075643"/>
+  <nd ref="2661213472"/>
+  <nd ref="60740168"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="name:uk" v="Амстел"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="797334786" visible="true" version="4" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="60740168"/>
+  <nd ref="2661213471"/>
+  <nd ref="7457075647"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="797334789" visible="true" version="9" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960285"/>
+  <nd ref="855290074"/>
+  <nd ref="5124049230"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+ </way>
+ <way id="797334790" visible="true" version="4" changeset="179583198" timestamp="2026-03-09T12:35:38Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="5124049230"/>
+  <nd ref="5124049229"/>
+  <nd ref="7457075643"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="lock" v="yes"/>
+  <tag k="lock_name" v="Amstelsluis"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="waterway" v="canal"/>
+  <tag k="wikidata" v="Q15869955"/>
+ </way>
+ <way id="881129188" visible="true" version="7" changeset="139010124" timestamp="2023-07-25T21:56:21Z" user="Loop120" uid="10599582">
+  <nd ref="178249904"/>
+  <nd ref="8195221117"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="881129189" visible="true" version="9" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="178249893"/>
+  <nd ref="331957294"/>
+  <nd ref="178249896"/>
+  <nd ref="331958720"/>
+  <nd ref="5793095208"/>
+  <nd ref="12242058694"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="881129200" visible="true" version="10" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="4521541054"/>
+  <nd ref="11813499136"/>
+  <nd ref="1162090923"/>
+  <nd ref="178249893"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="881315102" visible="true" version="7" changeset="139010124" timestamp="2023-07-25T21:56:21Z" user="Loop120" uid="10599582">
+  <nd ref="1160148610"/>
+  <nd ref="1160149055"/>
+  <nd ref="1160148915"/>
+  <nd ref="1160149359"/>
+  <nd ref="1160149159"/>
+  <nd ref="1160148908"/>
+  <nd ref="1160148763"/>
+  <nd ref="1160148726"/>
+  <nd ref="1160149304"/>
+  <nd ref="1160148994"/>
+  <nd ref="1160148873"/>
+  <nd ref="1160149083"/>
+  <nd ref="2077514167"/>
+  <nd ref="1160148930"/>
+  <nd ref="1160148686"/>
+  <nd ref="1160149267"/>
+  <nd ref="7673198466"/>
+  <nd ref="1160149203"/>
+  <nd ref="1160149033"/>
+  <nd ref="1160148804"/>
+  <nd ref="1160149008"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322626543" visible="true" version="1" changeset="157678683" timestamp="2024-10-09T15:51:03Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="12238673172"/>
+  <nd ref="12238673173"/>
+  <tag k="boat" v="yes"/>
+  <tag k="canoe" v="yes"/>
+  <tag k="motorboat" v="yes"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322626544" visible="true" version="1" changeset="157678683" timestamp="2024-10-09T15:51:03Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="46367195"/>
+  <nd ref="178249922"/>
+  <nd ref="12238673172"/>
+  <tag k="boat" v="yes"/>
+  <tag k="canoe" v="yes"/>
+  <tag k="motorboat" v="yes"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986006" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960543"/>
+  <nd ref="3575001137"/>
+  <nd ref="5927316660"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="0"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+  <tag k="wikidata" v="Q185405"/>
+  <tag k="wikipedia" v="nl:Amstel (rivier)"/>
+ </way>
+ <way id="1322986007" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="60740166"/>
+  <nd ref="331960543"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="0"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+  <tag k="wikidata" v="Q185405"/>
+  <tag k="wikipedia" v="nl:Amstel (rivier)"/>
+ </way>
+ <way id="1322986008" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="178249906"/>
+  <nd ref="60740166"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="name:uk" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986009" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960261"/>
+  <nd ref="2606003209"/>
+  <nd ref="331960262"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="name:uk" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986010" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="60740168"/>
+  <nd ref="331960261"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="name:uk" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986011" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="12242058694"/>
+  <nd ref="178249899"/>
+  <nd ref="12242058695"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986012" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="12242058695"/>
+  <nd ref="12242058696"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986013" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="12242058696"/>
+  <nd ref="2606003203"/>
+  <nd ref="178249904"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986014" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="331960356"/>
+  <nd ref="331960285"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1322986015" visible="true" version="1" changeset="157731396" timestamp="2024-10-10T19:57:07Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="8195221117"/>
+  <nd ref="331960355"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1334812573" visible="true" version="1" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="4521541053"/>
+  <nd ref="2606003197"/>
+  <nd ref="4521541054"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1334812574" visible="true" version="1" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="784035887"/>
+  <nd ref="178249886"/>
+  <nd ref="178249887"/>
+  <nd ref="331957630"/>
+  <nd ref="4521541053"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1334812575" visible="true" version="1" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="784035874"/>
+  <nd ref="2077512476"/>
+  <nd ref="784035876"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="seamark:bridge:category" v="yes"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <way id="1334812576" visible="true" version="1" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <nd ref="784035876"/>
+  <nd ref="2605998684"/>
+  <nd ref="784035878"/>
+  <nd ref="784035881"/>
+  <nd ref="784035884"/>
+  <nd ref="8197191639"/>
+  <nd ref="784035887"/>
+  <tag k="boat" v="yes"/>
+  <tag k="CEMT" v="II"/>
+  <tag k="maxspeed" v="7.5"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="waterway" v="river"/>
+ </way>
+ <relation id="12882829" visible="true" version="12" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <member type="way" ref="96361938" role="main_stream"/>
+  <member type="way" ref="312563296" role="main_stream"/>
+  <member type="way" ref="881315102" role="main_stream"/>
+  <member type="way" ref="70385077" role="main_stream"/>
+  <member type="way" ref="1334812575" role="main_stream"/>
+  <member type="way" ref="1334812576" role="main_stream"/>
+  <member type="way" ref="1334812574" role="main_stream"/>
+  <member type="way" ref="1334812573" role="main_stream"/>
+  <member type="way" ref="881129200" role="main_stream"/>
+  <member type="way" ref="881129189" role="main_stream"/>
+  <member type="way" ref="1322986011" role="main_stream"/>
+  <member type="way" ref="1322986012" role="main_stream"/>
+  <member type="way" ref="1322986013" role="main_stream"/>
+  <member type="way" ref="881129188" role="main_stream"/>
+  <member type="way" ref="1322986015" role="main_stream"/>
+  <member type="way" ref="527004184" role="main_stream"/>
+  <member type="way" ref="1322986014" role="main_stream"/>
+  <member type="way" ref="527004185" role="main_stream"/>
+  <member type="way" ref="260595784" role="main_stream"/>
+  <member type="way" ref="797334786" role="main_stream"/>
+  <member type="way" ref="527004188" role="main_stream"/>
+  <member type="way" ref="260595783" role="main_stream"/>
+  <member type="way" ref="527004189" role="main_stream"/>
+  <member type="way" ref="797334789" role="main_stream"/>
+  <member type="way" ref="797334790" role="main_stream"/>
+  <member type="way" ref="797334785" role="main_stream"/>
+  <member type="way" ref="527004190" role="main_stream"/>
+  <member type="way" ref="260595785" role="main_stream"/>
+  <member type="way" ref="527004191" role="main_stream"/>
+  <member type="way" ref="1322986010" role="main_stream"/>
+  <member type="way" ref="1322986009" role="main_stream"/>
+  <member type="way" ref="30123973" role="main_stream"/>
+  <member type="way" ref="1322986008" role="main_stream"/>
+  <member type="way" ref="1322986007" role="main_stream"/>
+  <member type="way" ref="1322986006" role="main_stream"/>
+  <member type="way" ref="195582876" role="main_stream"/>
+  <member type="way" ref="1322626544" role="main_stream"/>
+  <member type="way" ref="1322626543" role="main_stream"/>
+  <member type="way" ref="195582877" role="main_stream"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="type" v="waterway"/>
+  <tag k="waterway" v="river"/>
+  <tag k="wikidata" v="Q185405"/>
+  <tag k="wikipedia" v="nl:Amstel (rivier)"/>
+ </relation>
+</osm>
