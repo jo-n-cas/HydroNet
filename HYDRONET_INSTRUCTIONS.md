@@ -17,7 +17,8 @@ This version of the instructions is scoped to the data that is actually availabl
 
 **Solution:** An interactive, map-based dashboard that brings AGV's available data together:
 
-- **Monitoring coverage map:** every chemistry (FYCHEM) and hydrobiology (HB) location, styled by how much and what is measured there (from the aggregate counts in the location inventories).
+- **Spatial focus: the Amstel river only.** All views are scoped to the Amstel corridor (Amstelhoek to Amsterdam centre, plus a configurable buffer). AGV-wide figures are shown only as context next to the Amstel figures, never as the main view.
+- **Monitoring coverage map:** every chemistry (FYCHEM) and hydrobiology (HB) location in the Amstel corridor, styled by how much and what is measured there (from the aggregate counts in the location inventories).
 - **Amstel corridor view:** the monitoring locations on or near the Amstel, ordered upstream to downstream along the river, together with the Amstel water level and flow series.
 - **Biology time series:** for the 50 locations with raw hydrobiology data, time series per parameter / taxon group.
 - **Point-source pressures:** AGV's 12 wastewater treatment plants (RWZI) with their daily effluent volume and effluent quality (phosphate, suspended solids where measured), and which monitoring locations lie near them.
@@ -183,9 +184,10 @@ All raw files go in `data/raw/` unchanged. The facts below were checked against 
 
 ### 5.4 Amstel corridor (`amstel.py`)
 
-- Obtain the Amstel river centreline from an open source (OpenStreetMap `waterway=river, name=Amstel`, or a PDOK water dataset). Store it in `data/external/amstel.geojson`, record source and date in `DECISIONS.md`. Confirm with the user before downloading. If no download is possible, allow a manually digitised line in `data/external/`.
-- Define the Amstel as the river from the confluence of the Drecht and the Kromme Mijdrecht (Amstelhoek/Uithoorn) to Amsterdam centre. Document the exact start and end points used.
-- Select stations within a configurable buffer of the centreline (`settings.yaml`, default 50 m, also show the result for 25 m and 100 m in `DECISIONS.md` so the sensitivity is visible). Output `data/processed/amstel_stations.parquet` with `station_id, distance_to_river_m, chainage_m`.
+- The Amstel centreline is built by `scripts/build_amstel_line.py` from OpenStreetMap (© OpenStreetMap contributors, ODbL). It combines relation `12882829` (the Amstel, 39 `main_stream` ways, Nes aan de Amstel to Amsterdam) with way `96361977` (Amstelhoek to Nes aan de Amstel, which OSM names "Amstel-Drechtkanaal"). Where the river splits into parallel lock channels (the Amstelsluizen), the shortest channel is kept. Outputs: `data/external/amstel.geojson` (EPSG:4326), `amstel_rd.geojson` (EPSG:28992) and `amstel_segments.geojson` (the way IDs used). Source files and download date are in `DECISIONS.md`.
+- The Amstel is defined as the river from the confluence of the Drecht and the Kromme Mijdrecht at Amstelhoek (52.2288 N, 4.8207 E) to the Binnen-Amstel in Amsterdam centre (52.3674 N, 4.8940 E): 22.0 km.
+- Do not select Amstel stations by code prefix. Most corridor stations are `AMS…`, but some `AMS` codes lie elsewhere (e.g. AMS186 on the Ringvaart), and the corridor also contains other prefixes (KMU, UHP, PEB, VGD, ADM, …).
+- **Selection rule (team decision):** the pipeline keeps every location within **100 m** of the centreline (`settings.yaml`: `amstel.max_distance_m`), with all its data. The exact procedure, edge cases and expected results are in `docs/AMSTEL_STATION_SELECTION.md`. The real inventories give 30 / 58 / 76 locations at 25 / 50 / 100 m. Output `data/processed/amstel_stations.parquet` with `station_id, is_chem, is_bio, distance_to_river_m, chainage_m, beyond_river_end`, not pre-filtered below 100 m. The UI offers 25 / 50 / 100 m as a sensitivity filter on top of this table.
 - `chainage_m` = position along the centreline measured from the upstream start (shapely `project`). Ordering by chainage gives an upstream→downstream sequence along the Amstel. This replaces elevation-based flow direction: the Amstel's general flow direction is towards Amsterdam, but the system is managed (sluices, pumping), so ordering is labelled **"position along the river (upstream → downstream, indicative)"**.
 - Stations in side canals or polders close to the river may fall within the buffer. Add `config/amstel_overrides.csv` (`station_id, action: include|exclude, reason`) so a user can correct the selection.
 - Place the two hydrology sensors (Amstelsluizen, Berlagebrug) on the corridor by chainage. Their coordinates are not in the data: take them from an open source or the known structure locations, put them in `settings.yaml`, and document the source.
@@ -208,20 +210,25 @@ All raw files go in `data/raw/` unchanged. The facts below were checked against 
 
 ## 6. UI specification (Streamlit)
 
+**Spatial scope:** the whole UI is scoped to the Amstel corridor (Section 5.4). AGV-wide numbers appear only as context next to the Amstel numbers (e.g. "Amstel corridor: 58 locations · AGV-wide: 5,414"). The detailed page design is in `docs/UI_PLAN.md`.
+
 **Layout:** sidebar for controls, main area with map on top and detail panels below.
 
 **Sidebar**
 - Station source filter: chemistry, biology, both
 - Parameter group selector (from `parameter_groups.yaml`, default Tier 1 nutrients) and optional single parameter (default `Ptot_mgP/l`)
+- Amstel buffer distance: 25 / 50 / 100 m (default 100 m, matching the pipeline selection rule; smaller values are a sensitivity view)
+- River stretch: chainage range slider in km along the Amstel (default: the whole river). It selects a stretch of river and drives the map highlight, the small-multiples strip, the corridor view and the phosphorus chain. It replaces free-form area selection on the map.
 - Date range selector (applies to biology, hydrology and RWZI time series)
-- Layer toggles: stations, Amstel corridor, RWZIs, hydrology sensors
+- Layer toggles: corridor stations, Amstel centreline and buffer, RWZIs, hydrology sensors, context stations outside the corridor (off by default)
 - Quality code filter for biology data (default: show all, with codes visible)
 
 **Map**
-- Stations sized or coloured by number of observations for the selected parameter group (colorblind-safe sequential palette, with legend; grey for zero). Distinguish chemistry, biology and both by marker shape.
-- Stations with raw biology data in the prototype are highlighted.
-- Amstel centreline with the buffer zone; Amstel stations labelled with their chainage.
-- RWZI markers with the "discharge point not verified" label where applicable.
+- Opens on the Amstel corridor extent. Only corridor stations are drawn as data markers; stations outside the corridor are hidden unless the context layer is on, in which case they are tiny grey dots without counts.
+- Corridor stations are sized or coloured by number of observations for the selected parameter group (colorblind-safe sequential palette, with legend; grey for zero). Distinguish chemistry, biology and both by marker shape.
+- Stations with raw biology data in the prototype are highlighted. If none lie in the corridor, say so on the map and point to the nearest one with its distance.
+- Amstel centreline with the buffer zone and the selected stretch highlighted; corridor stations labelled with their chainage; credit "© OpenStreetMap contributors".
+- RWZIs: the Amstel-linked plants (within the pressure buffer of the corridor, plus Uithoorn, De Ronde Venen and Amstelveen as named in `settings.yaml`) are drawn prominently, with the "discharge point not verified" label where applicable. Other AGV plants appear only in a collapsed context section of the Pressures page.
 - Click a station or RWZI to open its detail panel.
 
 **Station detail panel**
@@ -238,7 +245,7 @@ All raw files go in `data/raw/` unchanged. The facts below were checked against 
 - Water level and Q time series below.
 
 **Data gaps view**
-- The table from 5.3 / `DATA_REQUEST.md`.
+- The table from 5.3 / `DATA_REQUEST.md`, with columns for the Amstel corridor and AGV-wide side by side.
 
 **Methodology and limitations panel** (always reachable): states Section 8 in plain language.
 

@@ -1,0 +1,47 @@
+# HydroNet settings: shared by the pipeline (src/hydronet) and the UI (app/).
+# All paths are relative to the repository root. No absolute paths.
+
+paths:
+  raw_dir: .                              # AGV files currently sit in the repo root; move to data/raw/ when the pipeline is set up
+  raw_files:
+    fychem_locations: FYCHEM_unique_locations_with_measurements.geojson
+    hb_locations: HB_unique_locations_with_measurements.geojson
+    hb_sample: HB_sampled50locations.csv
+    parameter_dictionary: Parameter_uitleg.xlsx
+    hydrology_amstelsluizen: Amstelsluizen_waterhoogte.csv
+    hydrology_berlagebrug: Berlagebrug_debiet_waterhoogte.csv
+    rwzi_installations: csv/Installations.csv
+    rwzi_measurement_points: csv/MeasurementPoints.csv
+    rwzi_measurement_values: csv/MeasurementValues.csv
+  interim_dir: data/interim
+  processed_dir: data/processed
+  external_dir: data/external
+
+amstel:
+  centreline_rd: data/external/amstel_rd.geojson   # built by scripts/build_amstel_line.py
+  max_distance_m: 100                               # pipeline selection rule (docs/AMSTEL_STATION_SELECTION.md)
+  end_tolerance_m: 1.0                              # projection this close to a line end -> beyond_river_end
+  overrides: config/amstel_overrides.csv
+  ui_buffer_options_m: [25, 50, 100]
+  ui_default_buffer_m: 100
+  # Hydrology sensor positions: not in the data. TODO: fill from an approved open source and document in DECISIONS.md.
+  sensors:
+    Amstelsluizen: {sensor_id: MPP00013_LIT054_1, x_rd: null, y_rd: null, source: null}
+    Berlagebrug: {sensor_id: MPP00976_LIT054_1, x_rd: null, y_rd: null, source: null}
+
+pressures:
+  agv_installation_prefix: NL.11
+  rwzi_locations: config/rwzi_locations.csv        # TODO: to be created from open data (instructions 5.5)
+  # Plants linked to the Amstel in sources (IPLO 2024; 2017 permit documents). ASSUMED until discharge points are verified.
+  amstel_linked_rwzi: [NL.11.UI, NL.11.RV, NL.11.AM]
+  nearby_station_buffer_m: 2000                    # placeholder analysis choice, shown in the UI; not a norm
+
+cleaning:
+  sentinel_values: [-999]
+  hydrology_outlier_robust_sd: 6                   # flag (never remove) beyond median +/- k * robust SD
+
+ui:
+  # Switch to real data with one line: data_dir: data/processed
+  data_dir: tests/fixtures/processed
+  default_parameter_group: tier1_nutrients_core
+  default_parameter: Ptot_mgP/l

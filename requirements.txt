@@ -1,0 +1,14 @@
+# Python 3.11+ (tested on 3.13.5). Install: python -m venv .venv && .venv/bin/pip install -r requirements.txt
+pandas==3.1.0
+numpy==2.5.4
+pyarrow==26.0.0
+geopandas==1.2.0
+shapely==2.2.0
+pyproj==3.8.0
+openpyxl==3.1.5
+PyYAML==6.0.3
+streamlit==1.66.1
+folium==0.20.0
+streamlit-folium==0.27.4
+plotly==7.1.0
+pytest==9.2.0
