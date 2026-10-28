@@ -131,7 +131,7 @@ hydronet/
 
 ## 4. Data inputs (as actually available)
 
-All raw files go in `data/raw/` unchanged. The facts below were checked against the real files; re-verify them in Phase 1.
+All raw files stay unchanged; the pipeline looks them up in `paths.raw_dirs` (`data/raw/`, `data/internal/` or the repo root, first match). The facts below were checked against the real files; re-verify them in Phase 1.
 
 | File | Content | Key facts |
 |---|---|---|

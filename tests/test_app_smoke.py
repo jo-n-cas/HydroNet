@@ -1,5 +1,6 @@
 """Headless smoke test: every page renders on the fixtures, also under changed settings."""
 
+import os
 from pathlib import Path
 
 import pytest
@@ -12,6 +13,7 @@ PAGES = ["views/1_overview.py", "views/2_coverage_map.py", "views/3_station_deta
 
 
 def _run(page, **state):
+    os.environ["HYDRONET_DATA_DIR"] = "tests/fixtures/processed"     # always test on fixtures
     at = AppTest.from_file(APP, default_timeout=180)
     for k, v in state.items():
         at.session_state[k] = v

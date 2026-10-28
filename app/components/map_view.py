@@ -60,7 +60,7 @@ def build_map(ctx, counts: pd.Series, selected: str | None, settings: dict) -> f
         folium.PolyLine([(y, x) for x, y in b.line_wgs84.coords], color=theme.INK, weight=1.6,
                         tooltip="Amstel centreline (OpenStreetMap)").add_to(m)
         lo, hi = ctx.stretch_m
-        if lo > 0 or hi < ctx.river_length_m - 1:
+        if lo > 0 or hi < ctx.river_length_m - 100:   # slider rounds to 0.1 km
             seg = gpd.GeoSeries([substring(b.line_rd, lo, hi)], crs=28992).to_crs(4326).iloc[0]
             folium.PolyLine([(y, x) for x, y in seg.coords], color=theme.ACCENT, weight=6, opacity=0.35,
                             tooltip=f"Selected stretch km {lo / 1000:.1f}–{hi / 1000:.1f}").add_to(m)

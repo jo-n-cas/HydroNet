@@ -26,6 +26,15 @@ The centreline is built from the OpenStreetMap exports in `data/external/`. Its 
     --extra data/external/uithoorn_waterways_overpass.json --extra-way 96361977
 ```
 
+## Clean the data (pipeline)
+
+```bash
+PYTHONPATH=src .venv/bin/python -m hydronet.pipeline              # full run (~15 s)
+PYTHONPATH=src .venv/bin/python -m hydronet.pipeline --skip-rwzi  # re-use the cached RWZI extract
+```
+
+The pipeline reads the raw AGV files from the first folder in `paths.raw_dirs` that has them (`data/raw`, `data/internal` or the repo root). It writes `data/processed/*.parquet`, `rejected_values.parquet` and `pipeline_manifest.json` (row counts, rejected reasons, checks). Nothing is deleted silently: invalid rows go to `rejected_values.parquet` with a reason, and suspect values are kept with a `qa_flag`.
+
 ## Run the app
 
 ```bash
@@ -40,9 +49,11 @@ The UI reads the folder named in `config/settings.yaml`:
 
 ```yaml
 ui:
-  data_dir: tests/fixtures/processed   # synthetic fixtures (default while the pipeline is being built)
-  # data_dir: data/processed           # real pipeline outputs: switch this one line
+  data_dir: data/processed             # real pipeline outputs (default)
+  # data_dir: tests/fixtures/processed # synthetic fixtures for layout work
 ```
+
+The environment variable `HYDRONET_DATA_DIR` overrides this; the tests use it to always run on the fixtures.
 
 On fixtures, every page shows a **"Synthetic fixture data"** banner, and all station IDs start with `SYN`. Regenerate the fixtures with:
 

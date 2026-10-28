@@ -53,7 +53,9 @@ st.plotly_chart(charts.rwzi_grid(yearly, gaps, plants, metrics, years), width="s
                 config={"displayModeBar": False})
 captions.figure_caption("Small multiples: one row per plant (distance of the plant site to the river and "
                         "nearest river km in the label), one column per effluent metric, shared y-axis per "
-                        "column. 'not measured' marks plant–metric combinations without data.")
+                        "column. 'not measured' marks plant–metric combinations without data; hollow grey "
+                        "points are partial years (fewer than 300 days, e.g. 2026 = one day) and are not "
+                        "connected.")
 missing = [f"{r['name'].replace('rwzi ', '')}: {', '.join(metrics[m]['label'].lower() for m in metrics if gaps.loc[r['installation'], m] == 0)}"
            for _, r in sub.iterrows() if (gaps.loc[r["installation"]] == 0).any()]
 if missing:

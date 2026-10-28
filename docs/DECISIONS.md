@@ -2,6 +2,30 @@
 
 Assumptions and deviations, newest first. Format: date, decision, reason.
 
+## 2026-10-28: Cleaning pipeline and switch of the UI to real data
+
+- **Pipeline:** `python -m hydronet.pipeline` (with `src` on `PYTHONPATH`) rebuilds `data/processed/` in about 12 s, including a streamed scan of the 28.7 M-row `MeasurementValues.csv`. `--skip-rwzi` re-uses the cached extract `data/interim/rwzi_values_nl11.parquet`.
+- **UI data source:** `ui.data_dir` is now `data/processed` (real). Tests force the fixtures with `HYDRONET_DATA_DIR=tests/fixtures/processed`.
+- **Raw file lookup:** `paths.raw_dirs: [data/raw, data/internal, .]`, first match per file. The colleagues' scripts use `data/internal/`; locally the files sit in the repo root. Raw files are never modified.
+- **Checks recorded in the manifest** (all as documented):
+  - 4,971 stations (4,093 + 1,321 − 443 shared codes); 0 inventory count mismatches; 35 codes not in the dictionary.
+  - 76 Amstel locations (26 chemistry, 61 biology); raw biology only at VGD125.
+  - 6 sentinels (−999) rejected from 13,340 biology rows.
+  - 1,333,435 AGV RWZI rows, of which 72,698 are effluent.
+  - 123 distinct codes share coordinates with another code; they are kept separate and logged.
+- **Biology flags:**
+  - Dictionary bounds (`H_MIN`/`Z_MIN`, `H_MAX`/`Z_MAX`, widest available) only *flag* values (`out_of_range`).
+  - Limit symbols and quality codes are kept unchanged; values are not substituted.
+  - `taxon_group` = `TWN taxontype`; `krw_waterbody` = `locatie KRWmeetpuntlocatie`.
+- **Hydrology codes found in the real files** (flagged, never removed; `config/settings.yaml` → `hydrology_suspect_values`):
+  - Berlagebrug water level **−32.768 m** on 15 days. This is an int16 "no data" code, flagged `sentinel_-32.768`.
+  - Berlagebrug Q **−28,300,000 m³/day** on exactly 185 days (2013–2019), with more days just below it. This is probably a sensor ceiling, flagged `repeated_extreme_value`.
+  - The remaining extremes are flagged `outlier_robust` (median ± 6 robust SD, computed without the code values): 13 at Amstelsluizen, 125 for the Berlagebrug level and 112 for Berlagebrug Q.
+  - Plots scale to the unflagged values; flagged values beyond that range are drawn at the panel edge (▲▼), and the hover shows the true value.
+- **Observation, not interpreted:** Berlagebrug Q is almost flat near 0 from about late 2022 onward, which looks like a sensor or method change. To be checked with AGV.
+- **RWZI partial years:** the effluent files end on 2026-01-01, so "2026" is one day. Years with fewer than 300 days are drawn hollow and not connected.
+- **Biology on the Amstel:** VGD125 was sampled once, on 2005-08-09 (44 rows). It has no values in the 2021–2024 overlap with the RWZI data; the phosphorus chain states this.
+
 ## 2026-10-28: UI build decisions (branch `ui`)
 
 - **Map library:** folium with streamlit-folium.
@@ -72,7 +96,7 @@ Assumptions and deviations, newest first. Format: date, decision, reason.
 ## 2026-10-28: Amstel centreline from OpenStreetMap
 
 - **Source:** OpenStreetMap, © OpenStreetMap contributors, licensed under ODbL 1.0. Downloaded 2026-10-28, with user approval.
-  - Relation `12882829` (`waterway=river`, `name=Amstel`, version 12, last edited 2024-11-17), fetched from `https://www.openstreetmap.org/api/0.6/relation/12882829/full` and saved as `data/external/amstel_relation_12882829_full.osm`. The team's `amstel_river_loc.xml` holds the same relation but without the way and node geometry, so it cannot be used on its own.
+  - Relation `12882829` (`waterway=river`, `name=Amstel`, version 12, last edited 2024-11-17), fetched from `https://www.openstreetmap.org/api/0.6/relation/12882829/full` and saved as `data/external/amstel_relation_12882829_full.osm`. The team's `map_overview/amstel_river_loc.xml` holds the same relation but without the way and node geometry, so it cannot be used on its own.
   - Way `96361977` (Amstelhoek → Nes aan de Amstel), fetched with an Overpass query over bbox 52.225–52.256 N, 4.81–4.875 E (`overpass-api.de`) and saved as `data/external/uithoorn_waterways_overpass.json`.
 - **Build:** `scripts/build_amstel_line.py data/external/amstel_relation_12882829_full.osm data/external/amstel.geojson --extra data/external/uithoorn_waterways_overpass.json --extra-way 96361977`.
 - **Decision 1, include way 96361977:** the instructions define the Amstel as starting at the Drecht / Kromme Mijdrecht confluence (Amstelhoek). OSM names this 4.5 km stretch "Amstel-Drechtkanaal" and starts the Amstel relation at the Oude Waver junction near Nes aan de Amstel. Without this stretch, the Uithoorn reach, where the RWZI Uithoorn is located, would be missing.

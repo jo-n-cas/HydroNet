@@ -110,10 +110,10 @@ else:
                                                                       for v in tx])),
                               hovertemplate="%{y} at %{x}: %{text} observations<extra></extra>"))
     off = dict(zip(near["station_id"], near["offset_m"] / 1000))
-    f2.update_xaxes(tickvals=order, ticktext=[f"{s}<br>{off[s] + 0.0:+.1f} km".replace("-0.0", "±0.0").replace("+0.0", "±0.0") for s in order], tickangle=0,
+    f2.update_xaxes(tickangle=-50, tickfont=dict(size=10), tickvals=order, ticktext=[f"{s}<br>{off[s] + 0.0:+.1f} km".replace("-0.0", "±0.0").replace("+0.0", "±0.0") for s in order],
                     title="corridor locations, ordered upstream → downstream (offset from the plant's river km)")
     f2.update_yaxes(autorange="reversed", showgrid=False)
-    f2.update_layout(height=60 + 26 * len(t1) + 50, margin=dict(l=140, r=16, t=16, b=70))
+    f2.update_layout(height=60 + 26 * len(t1) + 110, margin=dict(l=140, r=16, t=16, b=120))
     st.plotly_chart(f2, width="stretch", config={"displayModeBar": False})
     captions.note("Counts only: the prototype has no raw chemistry values, so concentrations along this "
                   "stretch cannot be shown. Raw FYCHEM values for these locations are the first data request.")

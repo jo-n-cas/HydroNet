@@ -59,7 +59,10 @@ def dot_strip(df: pd.DataFrame, label_map: dict[str, str], highlight: str | None
     for x, y in zip(d["n_observations"], labels):
         fig.add_shape(type="line", x0=1, x1=x, y0=y, y1=y, line=dict(color=theme.HAIRLINE, width=1))
     xmax = max(10, float(d["n_observations"].max() or 10))
-    fig.update_xaxes(type="log", title="observations (log)", range=[0, math.log10(xmax) + 0.15])
+    top = math.ceil(math.log10(xmax))
+    fig.update_xaxes(type="log", title="observations (log)", range=[0, math.log10(xmax) + 0.15], tickangle=0,
+                     tickvals=[10 ** e for e in range(0, top + 1, 2)],
+                     ticktext=[f"{10 ** e:,}" for e in range(0, top + 1, 2)])
     fig.update_layout(height=max(160, 24 * len(d) + 70), title=title, margin=dict(l=10, r=16, t=16, b=44))
     fig.update_yaxes(showgrid=False, automargin=True, tickfont=dict(size=11, color=theme.INK))
     return fig
@@ -116,18 +119,34 @@ def hydrology_chart(hyd: pd.DataFrame, overlap=None, x_range=None) -> go.Figure:
     for i, (site, q, _) in enumerate(panels, start=1):
         d = hyd[(hyd["site"] == site) & (hyd["quantity"] == q)].copy()
         d["date"] = pd.to_datetime(d["date"])
-        ok, flagged = d[d["qa_flag"].isna()], d[d["qa_flag"].notna()]
+        ok, flagged = d[d["qa_flag"].isna()], d[d["qa_flag"].notna()].copy()
         fig.add_trace(go.Scattergl(x=ok["date"], y=ok["value"], mode="lines",
                                    line=dict(color=theme.INK, width=0.7),
-                                   hovertemplate="%{x|%Y-%m-%d} · %{y:.3f}<extra></extra>"), row=i, col=1)
+                                   hovertemplate="%{x|%Y-%m-%d} · %{y:,.3f}<extra></extra>"), row=i, col=1)
+        # scale to the unflagged values; flagged values beyond that range are drawn at the panel edge
+        # (hover shows the true value), so codes such as -32.768 do not flatten the real signal
+        lo, hi = (ok["value"].min(), ok["value"].max()) if len(ok) else (None, None)
+        if lo is not None:
+            pad = (hi - lo) * 0.12 or abs(hi) * 0.1 or 1
+            lo_e, hi_e = lo - pad, hi + pad
+            fig.update_yaxes(range=[lo_e - pad * 0.3, hi_e + pad * 0.3], row=i, col=1)
         if len(flagged):
-            fig.add_trace(go.Scatter(x=flagged["date"], y=flagged["value"], mode="markers", marker=FLAG_STYLE,
-                                     text=flagged["qa_flag"],
-                                     hovertemplate="%{x|%Y-%m-%d} · %{y:,.3f} · flagged: %{text}<extra></extra>"),
-                          row=i, col=1)
-            fig.add_annotation(x=flagged["date"].iloc[0], y=flagged["value"].iloc[0], row=i, col=1,
-                               text=f"{len(flagged)} flagged value(s), kept", showarrow=True, arrowhead=0,
-                               ax=40, ay=-18, font=dict(size=10, color=theme.ACCENT), arrowcolor=theme.ACCENT)
+            shown = flagged["value"] if lo is None else flagged["value"].clip(lo_e, hi_e)
+            edge = shown != flagged["value"]
+            fig.add_trace(go.Scatter(
+                x=flagged["date"], y=shown, mode="markers",
+                marker={**FLAG_STYLE, "symbol": ["triangle-down-open" if (e and v < lo) else
+                                                 "triangle-up-open" if e else "x-thin-open"
+                                                 for e, v in zip(edge, flagged["value"])]},
+                customdata=np.stack([flagged["value"], flagged["qa_flag"]], axis=-1),
+                hovertemplate="%{x|%Y-%m-%d} · true value %{customdata[0]:,.3f} · flagged: %{customdata[1]}"
+                              "<extra></extra>"), row=i, col=1)
+            kinds = ", ".join(f"{n} {k}" for k, n in flagged["qa_flag"].value_counts().items())
+            note = f" ({int(edge.sum())} beyond range, drawn at edge ▲▼)" if edge.any() else ""
+            ax = "" if i == 1 else str(i)
+            fig.add_annotation(x=0.01, y=0.98, xref=f"x{ax} domain", yref=f"y{ax} domain", xanchor="left",
+                               yanchor="top", showarrow=False, text=f"flagged, kept: {kinds}{note}",
+                               font=dict(size=10, color=theme.ACCENT), bgcolor="rgba(250,248,243,0.85)")
         if overlap:
             overlap_band(fig, *overlap, row=i, col=1, annotate=(i == 1), label="common period")
     fig.update_layout(height=560, margin=dict(l=70, r=16, t=40, b=36))
@@ -189,18 +208,21 @@ def corridor_longitudinal(corr: pd.DataFrame, counts: pd.DataFrame, group_rows: 
         fig.add_annotation(x=0, xref="paper", y=0.5, yref=f"y{i} domain", xanchor="right", showarrow=False,
                            text=glabel.split(" · ")[-1], font=dict(size=10, color=theme.INK), xshift=-6)
     lo, hi = stretch_km
-    if lo > 0 or hi < river_km - 0.05:
+    if lo > 0 or hi < river_km - 0.1:            # slider rounds to 0.1 km
         fig.add_vrect(x0=lo, x1=hi, fillcolor="rgba(194,65,12,0.07)", line_width=0, layer="below")
     fig.update_xaxes(range=[-0.3, river_km + 0.3], title=None)
     fig.update_xaxes(title="position along the river, km from Amstelhoek (upstream → downstream, indicative)",
                      row=n, col=1)
-    fig.update_layout(height=120 + 34 * n, margin=dict(l=250, r=20, t=20, b=50))
+    fig.update_layout(height=120 + 34 * n, margin=dict(l=250, r=70, t=20, b=50))
     return fig
 
 
 def rwzi_grid(yearly: pd.DataFrame, gaps: pd.DataFrame, plants: list[tuple[str, str]],
-              metrics: dict, x_years: tuple[int, int]) -> go.Figure:
-    """Rows = plants, columns = metrics; yearly values with n_days; explicit 'not measured' cells."""
+              metrics: dict, x_years: tuple[int, int], min_days: int = 300) -> go.Figure:
+    """Rows = plants, columns = metrics; yearly values with n_days; explicit 'not measured' cells.
+
+    Years with fewer than ``min_days`` days of data are drawn hollow and not connected.
+    """
     keys = list(metrics)
     titles = [f"{metrics[k]['label']} ({metrics[k]['yearly']} · {metrics[k]['yearly_unit']})" for k in keys]
     n_rows, n_cols = len(plants), len(keys)
@@ -226,10 +248,17 @@ def rwzi_grid(yearly: pd.DataFrame, gaps: pd.DataFrame, plants: list[tuple[str, 
                                    text="not measured", font=dict(size=11, color=theme.MUTED))
                 continue
             d = yearly[(yearly["installation"] == inst) & (yearly["metric"] == k)]
+            full, part = d[d["n_days"] >= min_days], d[d["n_days"] < min_days]
             fig.add_trace(go.Scatter(
-                x=d["year"], y=d["value"], mode="lines+markers", line=dict(color=theme.INK, width=1),
-                marker=dict(size=5, color=theme.INK), customdata=d["n_days"],
+                x=full["year"], y=full["value"], mode="lines+markers", line=dict(color=theme.INK, width=1),
+                marker=dict(size=5, color=theme.INK), customdata=full["n_days"],
                 hovertemplate="%{x}: %{y:,.3g} · %{customdata} days<extra></extra>"), row=i, col=j)
+            if len(part):   # incomplete years: hollow, unconnected, so a 1-day 'year' cannot look like a drop
+                fig.add_trace(go.Scatter(
+                    x=part["year"], y=part["value"], mode="markers",
+                    marker=dict(size=6, symbol="circle-open", color=theme.MUTED), customdata=part["n_days"],
+                    hovertemplate="%{x} (partial year): %{y:,.3g} · only %{customdata} days<extra></extra>"),
+                    row=i, col=j)
     fig.update_xaxes(range=[years[0] - 0.4, years[-1] + 0.4], dtick=1, tickformat="d")
     # shared axes switch autorange off in plotly.js; force it on so each column scales to its data
     fig.update_yaxes(autorange=True, rangemode="tozero", nticks=3)

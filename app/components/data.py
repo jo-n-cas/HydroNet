@@ -6,6 +6,7 @@ Where data comes from is set by one line in config/settings.yaml: ``ui.data_dir`
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -92,6 +93,11 @@ def load_bundle(data_dir: str) -> Bundle:
     overrides = pd.read_csv(ov_path) if ov_path.exists() else None
 
     return Bundle(root, synthetic, tables, problems, manifest, line_rd, line_wgs84, rwzi, overrides)
+
+
+def data_dir() -> str:
+    """Data folder for the UI: env ``HYDRONET_DATA_DIR`` (used by tests) overrides ``ui.data_dir``."""
+    return os.environ.get("HYDRONET_DATA_DIR") or load_settings()["ui"]["data_dir"]
 
 
 def settings() -> dict[str, Any]:

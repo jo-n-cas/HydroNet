@@ -17,7 +17,7 @@ from components import data, sidebar, theme  # noqa: E402
 st.set_page_config(page_title="HydroNet · Amstel", layout="wide", initial_sidebar_state="expanded")
 theme.apply()
 
-bundle = data.load_bundle(data.settings()["ui"]["data_dir"])
+bundle = data.load_bundle(data.data_dir())
 if bundle.synthetic:
     st.markdown('<div class="hn-banner" role="alert">Synthetic fixture data: for layout testing only, '
                 'not AGV data. Switch <code>ui.data_dir</code> in <code>config/settings.yaml</code> to '

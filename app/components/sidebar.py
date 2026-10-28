@@ -139,7 +139,7 @@ def build(bundle: Bundle) -> Context:
     ss.data_label = ("SYNTHETIC fixtures" if bundle.synthetic else "processed") + (
         f" (run {bundle.manifest['run_at'][:10]})" if bundle.manifest and bundle.manifest.get("run_at") else "")
     sb.markdown("---")
-    sb.caption(f"Data: `{settings()['ui']['data_dir']}` · {ss.data_label}")
+    sb.caption(f"Data: `{bundle.data_dir.name}` · {ss.data_label}")
     if ss.get("selected_station"):
         sb.caption(f"Selected station: **{ss.selected_station}**")
         if sb.button("Clear selection", help="Deselect the station highlighted across views."):

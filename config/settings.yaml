@@ -2,7 +2,9 @@
 # All paths are relative to the repository root. No absolute paths.
 
 paths:
-  raw_dir: .                              # AGV files currently sit in the repo root; move to data/raw/ when the pipeline is set up
+  # Raw AGV files are looked up per file in these folders, first match wins (the team uses different
+  # layouts: data/internal/ for the colleagues' scripts, the repo root locally). Raw files are never modified.
+  raw_dirs: [data/raw, data/internal, .]
   raw_files:
     fychem_locations: FYCHEM_unique_locations_with_measurements.geojson
     hb_locations: HB_unique_locations_with_measurements.geojson
@@ -61,10 +63,15 @@ pressures:
 cleaning:
   sentinel_values: [-999]
   hydrology_outlier_robust_sd: 6                   # flag (never remove) beyond median +/- k * robust SD
+  # Exact values that are codes, not measurements (found in the real files 2026-10-28). Flagged, never removed;
+  # the flag name says why. Checked before the robust-outlier rule.
+  hydrology_suspect_values:
+    level_mNAP: {-32.768: sentinel_-32.768}              # Berlagebrug: int16 'no data' code / 1000
+    Q_m3_per_day: {-28300000: repeated_extreme_value}    # Berlagebrug: 185 identical days 2013-2019 (sensor ceiling?)
 
 ui:
   # Switch to real data with one line: data_dir: data/processed
-  data_dir: tests/fixtures/processed
+  data_dir: data/processed
   default_parameter_group: tier1_nutrients_core
   default_parameter: Ptot_mgP/l
   phosphorus_chain:
