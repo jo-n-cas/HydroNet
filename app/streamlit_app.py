@@ -19,9 +19,12 @@ theme.apply()
 
 bundle = data.load_bundle(data.data_dir())
 if bundle.synthetic:
-    st.markdown('<div class="hn-banner" role="alert">Synthetic fixture data: for layout testing only, '
-                'not AGV data. Switch <code>ui.data_dir</code> in <code>config/settings.yaml</code> to '
-                '<code>data/processed</code> for real outputs.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="hn-banner" role="alert">Dashboard pages use synthetic fixture data for layout '
+                'testing, not AGV chemistry results. The Chemical detection reach page uses real Amstel '
+                'station locations and explicitly labelled assumptions. '
+                'Switch <code>ui.data_dir</code> in '
+                '<code>config/settings.yaml</code> to <code>data/processed</code> for real pipeline outputs.</div>',
+                unsafe_allow_html=True)
 
 st.session_state["ctx"] = sidebar.build(bundle)
 
@@ -35,5 +38,6 @@ nav = st.navigation([
     st.Page(PAGES / "6_phosphorus_chain.py", title="Phosphorus chain"),
     st.Page(PAGES / "7_data_gaps.py", title="Data gaps"),
     st.Page(PAGES / "8_methods.py", title="Methods & limitations"),
+    st.Page(PAGES / "9_detection.py", title="Chemical detection reach"),
 ])
 nav.run()

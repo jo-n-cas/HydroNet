@@ -53,13 +53,32 @@ ui:
   # data_dir: tests/fixtures/processed # synthetic fixtures for layout work
 ```
 
+<<<<<<< Updated upstream
 The environment variable `HYDRONET_DATA_DIR` overrides this; the tests use it to always run on the fixtures.
 
 On fixtures, every page shows a **"Synthetic fixture data"** banner, and all station IDs start with `SYN`. Regenerate the fixtures with:
+=======
+With fixture data selected, the app shows a **synthetic data** banner. The other dashboard
+pages use `SYN` station IDs. Regenerate the fixtures with:
+>>>>>>> Stashed changes
 
 ```bash
 .venv/bin/python scripts/make_ui_fixtures.py
 ```
+
+The **Chemical detection reach** page uses real station locations and chemistry coverage in
+`amstel_subset/`. Select chloride (blue), ammonium (orange) or total phosphorus (purple).
+Choose **Map 1 · Chemical locations** to highlight stations with records for the selected chemical in that color;
+other selected stations are grey. Hover over any station to see recorded observation counts
+for all three chemicals. A colored marker means **assumed detected** under the explicit
+assumption that an observation means presence;
+grey means detection status is unknown, not absent. Choose **Map 2 · Possible entry and downstream
+route** to see an assumed south-to-north path for the same chemical. Thicker segments and larger
+station markers represent higher observation counts; they do not represent concentration.
+A hollow circle marks the first assumed presence, diamonds mark station intervals where counts
+rise, and the dashed line shows a possible continuation beyond the last recorded station.
+These are possible entry reaches, not verified sources: counts may rise because a station was
+sampled more often, and records at several stations do not prove a shared pollution event.
 
 The column contract both sides must follow is in `src/hydronet/schemas.py`. If a real file misses a contract column, the app says which one instead of guessing.
 
@@ -75,6 +94,7 @@ The column contract both sides must follow is in `src/hydronet/schemas.py`. If a
 | **Phosphorus chain** | The demo story: effluent → Tier 1 coverage near the plant → nearest raw biology, on a shared time axis |
 | **Data gaps** | Observations in AGV systems vs raw values in the prototype, per group; exports `DATA_REQUEST.md` |
 | **Methods & limitations** | Limitations (instructions §8), key analysis choices, data source in use, decisions log |
+| **Chemical detection reach** | Switches between assumed chemical presence and an indicative south-to-north route with count-rise entry candidates |
 
 Every figure carries an n-line, a settings caption and an **About this view** panel. That panel lists source files, processing steps, rows before and after cleaning, and rejected rows, and has CSV and JSON exports.
 

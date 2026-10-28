@@ -1,8 +1,10 @@
 """Export all records for the documented 100 m Amstel station selection."""
 
 import csv
+import ast
 import json
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -17,8 +19,10 @@ def main():
     ids = [code.strip() for code in block.replace("\n", "").split(",")]
     if len(ids) != 76 or len(set(ids)) != len(ids):
         raise ValueError("Expected 76 distinct stations in the documented Amstel selection")
+    river_order = {code: order for order, code in enumerate(ids, 1)}
 
     stations = {}
+    coverage = []
     OUT.mkdir(exist_ok=True)
     for source, filename in (
         ("chem", "FYCHEM_unique_locations_with_measurements.geojson"),
@@ -35,6 +39,10 @@ def main():
                 raise ValueError(f"Conflicting coordinates for {code}")
             station["sources"].add(source)
             station[f"{source}_obs"] = p["total_observations"]
+            counts = ast.literal_eval(re.sub(r"np\.int64\((-?\d+)\)", r"\1", p["parameter_counts"]))
+            if sum(counts.values()) != p["total_observations"]:
+                raise ValueError(f"Parameter counts disagree with total for {code}")
+            coverage.extend((code, source, parameter, count) for parameter, count in counts.items())
         (OUT / filename).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
 
     if set(stations) != set(ids):
@@ -46,6 +54,13 @@ def main():
             station = stations[code]
             writer.writerow([code, order, "chem" in station["sources"], "bio" in station["sources"],
                              *station["point"], station["chem_obs"], station["bio_obs"], code == "KMU103"])
+
+    with (OUT / "coverage.csv").open("w", encoding="utf-8", newline="") as target:
+        writer = csv.writer(target)
+        writer.writerow(["station_id", "river_order", "source", "parameter", "n_observations"])
+        writer.writerows((code, river_order[code], source, parameter, count)
+                         for code, source, parameter, count in sorted(
+                             coverage, key=lambda row: (river_order[row[0]], row[1], row[2])))
 
     with (DATA / "HB_sampled50locations.csv").open(encoding="utf-8-sig", newline="") as source, \
             (OUT / "HB_sampled50locations.csv").open("w", encoding="utf-8", newline="") as target:
