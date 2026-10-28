@@ -27,6 +27,48 @@ This version of the instructions is scoped to the data that is actually availabl
 
 **Demo goal:** Demonstrate the tool end to end with one real example from the data: one RWZI that discharges into (the catchment of) the Amstel, its effluent phosphate and volume over 2021–2025, the monitoring locations near it on the Amstel corridor, and what those locations measure.
 
+### 1.1 Analytical focus: nutrients, led by phosphorus (approved)
+
+The project's main focus has been approved by the team's marine biologist. All defaults, demo choices and the data request follow it.
+
+**Rationale:** nutrients are the main reason AGV's waters miss KRW targets, phosphorus is the nutrient that limits Amstel ecology, and the effluent of the wastewater treatment plants is a known phosphorus load on the Amstel. Phosphorus is also the only pollutant that can be followed through the whole chain in our data: **pressure (RWZI effluent) → water chemistry → ecological effect (algae, water clarity, aquatic plants)**.
+
+Parameter codes below are verified against `FYCHEM_unique_locations_with_measurements.geojson` and `HB_unique_locations_with_measurements.geojson`. Site counts are the number of locations with at least one observation.
+
+**Tier 1, core focus (default selection everywhere in the app):**
+
+| Role in the chain | Variable | Code | FYCHEM sites |
+|---|---|---|---|
+| Lead nutrient | Total phosphorus | `Ptot_mgP/l` | 1,054 |
+| Lead nutrient | Ortho-phosphate (dissolved, plant-available) | `PO4_mgP/l_nf` | 954 |
+| Nutrient | Total nitrogen | `Ntot_mgN/l` | 1,038 |
+| Sewage signature | Ammonium | `NH4_mgN/l_nf` | 1,029 |
+| Agricultural signature | Nitrate | `NO3_mgN/l_nf` | 998 |
+| Effect: organic load | Oxygen saturation / concentration | `O2_%`, `O2_mg/l` | 1,001 / 1,091 |
+| Effect: algae | Chlorophyll-a | `CHLFa_ug/l_spectro` | 1,058 |
+| Effect: light | Water clarity | `ZICHT_m` | 1,001 (+3,511 HB) |
+| Context | Temperature, pH, chloride | `T_oC`, `pH`, `Cl_mg/l` | 1,122 / 1,094 / 957 |
+
+**Tier 2, secondary tracers (selectable, not default):**
+- Metals (urban/industrial): `Cu_ug/l`, `Zn_ug/l`, `Ni_ug/l`, `Pb_ug/l`, `Cd_ug/l` (215–294 sites; Ni, Pb, Cd are EU priority substances).
+- Faecal bacteria (sewage/overflows): `E_COLI_nKVE/dl`, `INTTNLETRCCN_nKVE/dl`, `THERMTLRTCLS_nKVE/ml` (138–515 sites).
+- Organic load: `BZV5a_mgO2/l`, `CZV_mgO2/l` (222–417 sites).
+- Pesticides (agricultural): e.g. `atzne_ug/l`, `simzne_ug/l` (~80 sites).
+
+**Tier 3, biological effect (KRW biological quality elements):**
+- Aquatic plants `PTN_BEDKG_%` (3,665 sites; best biological coverage), fish `VSLC_*` (~570), macroinvertebrates `MEA_n` (289), phytoplankton `FPA_*` (~85). These are raw counts / cover, not EKR scores; raw values exist only for the 50 sampled locations.
+
+**Pressure side (RWZI data):** effluent phosphate (`fosfaat`) is available daily 2021–2025 for 4 AGV plants (Amsterdam West, Blaricum, Huizen, Weesp); effluent suspended solids and volume for most plants. Determine in Phase 5 which plants discharge into the Amstel catchment. Uithoorn, De Ronde Venen and Amstelveen are the Amstel-linked plants but have no effluent phosphate in the current data; if so, the demo uses effluent volume for those plants and states the gap, or uses a plant with phosphate data and documents why.
+
+**Data gaps to report, not analyse:**
+- PFAS (`PFOS_*`, `PFOA_*`): only 4–12 sites; present as "too sparse to trace / no clear source".
+- Medicine residues: AGV's current Amstel priority (ozone/activated-carbon upgrades at Uithoorn and De Ronde Venen), but no codes were found by name (e.g. diclofenac, carbamazepine). In Phase 1, do a full check of all 784 FYCHEM codes against the dictionary and confirm whether medicines are absent.
+
+**Rules that follow from the focus:**
+- `config/parameter_groups.yaml` defines the groups `tier1_nutrients_core`, `tier2_metals`, `tier2_bacteria`, `tier2_organic_load`, `tier2_pesticides`, `tier3_biology`, `gap_pfas`, `gap_medicines`, with the codes above. Tier 1 is the default group in the sidebar.
+- `docs/DATA_REQUEST.md` lists Tier 1 first, then Tier 2, and asks AGV for raw values on the Amstel corridor plus the water-type-specific KRW targets for the Amstel waterbody. Note that KRW waterbody `NL11_1_1` is the "Amstellandboezem" (the wider regional canal system), not the Amstel river alone.
+- No KRW norm values are hard-coded. Any target quoted from literature (e.g. an earlier Ptot target of 0.21 mg/l for the Amstel) is shown only as a cited reference with source and year, never as a current norm.
+
 ---
 
 ## 2. Tech stack and constraints
@@ -135,7 +177,7 @@ All raw files go in `data/raw/` unchanged. The facts below were checked against 
 
 ### 5.3 Coverage and data gaps (`stations.py`)
 
-- Group parameter codes into readable groups via `config/parameter_groups.yaml` (e.g. nutrients, oxygen, metals, pesticides, PFAS, bacteria, macrofauna, macrophytes, fish, phytoplankton). Codes not matched by any group go to `other`; report how many.
+- Group parameter codes into readable groups via `config/parameter_groups.yaml`, using the tiers and gap groups from Section 1.1. Codes not matched by any group go to `other`; report how many.
 - Per station: observations per group, number of distinct parameters, and a flag for whether raw values are available in the prototype (only the 50 HB locations).
 - Generate `docs/DATA_REQUEST.md` automatically from the coverage table: per parameter group, how many observations exist in AGV's systems (from the counts) versus how many values are available in the prototype. This is the quantified basis for requesting the raw FYCHEM export.
 
@@ -170,7 +212,7 @@ All raw files go in `data/raw/` unchanged. The facts below were checked against 
 
 **Sidebar**
 - Station source filter: chemistry, biology, both
-- Parameter group selector (from `parameter_groups.yaml`) and optional single parameter
+- Parameter group selector (from `parameter_groups.yaml`, default Tier 1 nutrients) and optional single parameter (default `Ptot_mgP/l`)
 - Date range selector (applies to biology, hydrology and RWZI time series)
 - Layer toggles: stations, Amstel corridor, RWZIs, hydrology sensors
 - Quality code filter for biology data (default: show all, with codes visible)
@@ -243,7 +285,7 @@ Deliver `docs/DATA_PROFILE.md`. *Accept when* all join keys, encodings, units an
 *Accept when* the AGV RWZIs with sourced coordinates appear on the map, effluent time series and yearly summaries are shown, and nearby stations are listed per RWZI.
 
 **Phase 6: Polish and demo.**
-Write `docs/DEMO_SCRIPT.md` around the example in Section 1 (pick an RWZI in the Amstel catchment with effluent phosphate data, or document why another one was chosen), finalize README (install, run, re-run pipeline, how to edit overrides and RWZI locations), and make sure the limitations are visible in the app. *Accept when* a new user can go from clone to running dashboard in under 10 minutes following the README.
+Write `docs/DEMO_SCRIPT.md` around the example in Section 1, following the phosphorus chain from Section 1.1 (RWZI effluent → Tier 1 coverage on the Amstel corridor → Tier 3 biology near it). Pick an RWZI in the Amstel catchment with effluent phosphate data, or document why another one was chosen, finalize README (install, run, re-run pipeline, how to edit overrides and RWZI locations), and make sure the limitations are visible in the app. *Accept when* a new user can go from clone to running dashboard in under 10 minutes following the README.
 
 ---
 
