@@ -1,0 +1,1035 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-28T13:08:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 31313300,
+  "lat": 52.1884740,
+  "lon": 4.7603706,
+  "tags": {
+    "name": "AWZI Nieuwveen",
+    "operator": "Hoogheemraadschap van Rijnland",
+    "wastewater": "plant"
+  }
+},
+{
+  "type": "node",
+  "id": 197774552,
+  "lat": 52.1643159,
+  "lon": 4.9931965,
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Breukelen"
+  }
+},
+{
+  "type": "node",
+  "id": 247370650,
+  "lat": 52.3618446,
+  "lon": 4.7388474,
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "AWZI Zwanenburg",
+    "operator": "Hoogheemraadschap van Rijnland"
+  }
+},
+{
+  "type": "node",
+  "id": 361195542,
+  "lat": 52.1090980,
+  "lon": 5.0450823,
+  "tags": {
+    "addr:city": "Utrecht",
+    "addr:housenumber": "51",
+    "addr:postcode": "3543AM",
+    "addr:street": "Krommewetering",
+    "amenity": "restaurant",
+    "cuisine": "french",
+    "email": "utrecht@restaurantzuiver.nl",
+    "name": "Zuiver",
+    "opening_hours": "Mo-Fr 09:00-22:00; Sa 17:00-22:00",
+    "phone": "+31 30 238 3233",
+    "website": "https://restaurantzuiver.nl/utrecht/"
+  }
+},
+{
+  "type": "node",
+  "id": 608603071,
+  "lat": 52.1124001,
+  "lon": 5.0405258,
+  "tags": {
+    "bench": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Rioolwaterzuivering",
+    "public_transport": "platform",
+    "ref:IFOPT": "NL:Q:51112553",
+    "shelter": "yes",
+    "zone": "5111"
+  }
+},
+{
+  "type": "node",
+  "id": 643040360,
+  "lat": 52.1125656,
+  "lon": 5.0408198,
+  "tags": {
+    "bench": "no",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Rioolwaterzuivering",
+    "public_transport": "platform",
+    "ref:IFOPT": "NL:Q:51112558",
+    "shelter": "no",
+    "zone": "5111"
+  }
+},
+{
+  "type": "node",
+  "id": 872507082,
+  "lat": 52.1119166,
+  "lon": 5.1079225,
+  "tags": {
+    "name": "RWZI Utrecht",
+    "office": "utility"
+  }
+},
+{
+  "type": "node",
+  "id": 1485615079,
+  "lat": 52.1123912,
+  "lon": 5.0406247,
+  "tags": {
+    "bus": "yes",
+    "name": "Rioolwaterzuivering",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 2735459829,
+  "lat": 52.3989499,
+  "lon": 4.7933124,
+  "tags": {
+    "addr:city": "Amsterdam",
+    "addr:housenumber": "15",
+    "addr:postcode": "1046BS",
+    "addr:street": "Australiëhavenweg",
+    "man_made": "wastewater_plant",
+    "name": "RWZI Amsterdam West",
+    "operator": "Stichting Waternet",
+    "phone": "+31 20 608 2989",
+    "source": "BAG",
+    "source:date": "2014-02-11"
+  }
+},
+{
+  "type": "node",
+  "id": 2737806822,
+  "lat": 52.3644899,
+  "lon": 4.8981511,
+  "tags": {
+    "addr:city": "Amsterdam",
+    "addr:housenumber": "39",
+    "addr:postcode": "1017VH",
+    "addr:street": "Utrechtsestraat",
+    "amenity": "cafe",
+    "name": "Zuivere Koffie",
+    "opening_hours": "Mo-Fr 08:00-17:00; Sa 09:00-17:00",
+    "source": "BAG",
+    "source:date": "2014-02-11",
+    "toilets:wheelchair": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2754629500,
+  "lat": 52.3567909,
+  "lon": 4.9291128,
+  "tags": {
+    "addr:city": "Amsterdam",
+    "addr:housenumber": "8",
+    "addr:street": "Waldenlaan",
+    "name": "Zuiver Geluk",
+    "opening_hours": "Mo 12:00-17:30; Tu-Sa 10:00-17:30; Su 12:00-17:00",
+    "shop": "gift",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3008634445,
+  "lat": 52.3310551,
+  "lon": 4.8521378,
+  "tags": {
+    "addr:city": "Amsterdam",
+    "addr:housenumber": "8",
+    "addr:postcode": "1081KH",
+    "addr:street": "Koenenkade",
+    "brand": "Spa Sport Hotel ZUIVER",
+    "name": "Zuiver Hotel & Wellness",
+    "tourism": "hotel",
+    "website": "https://zuiveramsterdam.nl/"
+  }
+},
+{
+  "type": "node",
+  "id": 3043781353,
+  "lat": 52.1191512,
+  "lon": 5.1178115,
+  "tags": {
+    "addr:city": "Utrecht",
+    "addr:housenumber": "1",
+    "addr:postcode": "3562EA",
+    "addr:street": "Theemsdreef",
+    "check_date": "2026-01-23",
+    "name": "Zuiverwas",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "phone": "+31 6 4879 0128",
+    "self_service": "yes",
+    "shop": "laundry",
+    "source": "BAG",
+    "source:date": "2014-08-25",
+    "website": "https://www.zuiverwas.nl"
+  }
+},
+{
+  "type": "node",
+  "id": 3953756920,
+  "lat": 52.1016991,
+  "lon": 5.0979883,
+  "tags": {
+    "addr:city": "Utrecht",
+    "addr:housenumber": "312",
+    "addr:postcode": "3551CT",
+    "addr:street": "Amsterdamsestraatweg",
+    "check_date": "2025-11-06",
+    "name": "Zuiverwas",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "payment:cash": "yes",
+    "self_service": "yes",
+    "shop": "laundry",
+    "source": "BAG",
+    "source:date": "2014-01-22",
+    "website": "https://www.zuiverwas.nl/"
+  }
+},
+{
+  "type": "node",
+  "id": 4272205053,
+  "lat": 52.3743487,
+  "lon": 4.8569629,
+  "tags": {
+    "name": "de zuivere naald",
+    "shop": "tailor",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 4347734693,
+  "lat": 52.1125742,
+  "lon": 5.0407548,
+  "tags": {
+    "bus": "yes",
+    "name": "Rioolwaterzuivering",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 6227921005,
+  "lat": 52.4277215,
+  "lon": 4.7817770,
+  "tags": {
+    "addr:city": "Westzaan",
+    "addr:housenumber": "2",
+    "addr:postcode": "1551NB",
+    "addr:street": "Schoot",
+    "name": "Zuiver",
+    "office": "yes",
+    "phone": "+31 75 614 6020",
+    "source": "BAG",
+    "source:date": "2019-01-22"
+  }
+},
+{
+  "type": "node",
+  "id": 12559500537,
+  "lat": 52.4292428,
+  "lon": 4.8572397,
+  "tags": {
+    "entrance": "main",
+    "name": "Meldpunt RWZI Zaandam"
+  }
+},
+{
+  "type": "way",
+  "id": 6319584,
+  "center": {
+    "lat": 52.1101106,
+    "lon": 5.1075842
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Utrecht",
+    "operator": "Hoogheemraadschap De Stichtse Rijnlanden"
+  }
+},
+{
+  "type": "way",
+  "id": 6319722,
+  "center": {
+    "lat": 52.1939878,
+    "lon": 5.2977144
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Soest"
+  }
+},
+{
+  "type": "way",
+  "id": 6319841,
+  "center": {
+    "lat": 52.2580000,
+    "lon": 5.0853500
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "RWZI Horstermeer"
+  }
+},
+{
+  "type": "way",
+  "id": 23087306,
+  "center": {
+    "lat": 52.1127069,
+    "lon": 5.0384340
+  },
+  "tags": {
+    "addr:city": "Utrecht",
+    "image": "https://www.hdsr.nl/publish/pages/177572/682px/rwzi_leidsche_rijn.jpg",
+    "man_made": "wastewater_plant",
+    "name": "RWZI - Leidsche Rijn",
+    "source": "yahoo aerial imaging",
+    "website": "https://www.hdsr.nl/buurt/utrecht/celluloseterugwinning-rwzi-leidsche-rijn/"
+  }
+},
+{
+  "type": "way",
+  "id": 23389514,
+  "center": {
+    "lat": 52.1879225,
+    "lon": 4.7584635
+  },
+  "tags": {
+    "barrier": "fence",
+    "man_made": "wastewater_plant",
+    "name": "AWZI Nieuwveen",
+    "operator": "Hoogheemraadschap van Rijnland"
+  }
+},
+{
+  "type": "way",
+  "id": 23391409,
+  "center": {
+    "lat": 52.3615417,
+    "lon": 4.7399613
+  },
+  "tags": {
+    "area": "yes",
+    "fenced": "yes",
+    "man_made": "wastewater_plant",
+    "name": "Afvalwaterzuivering Zwanenburg",
+    "operator": "Hoogheemraadschap van Rijnland",
+    "wastewater": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 26809191,
+  "center": {
+    "lat": 52.3138520,
+    "lon": 4.8908771
+  },
+  "tags": {
+    "alt_name": "RWZI Amstelveen",
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Amstelveen",
+    "operator": "Waternet"
+  }
+},
+{
+  "type": "way",
+  "id": 30743398,
+  "center": {
+    "lat": 52.2914387,
+    "lon": 4.7874972
+  },
+  "tags": {
+    "area": "yes",
+    "man_made": "wastewater_plant",
+    "name": "AWZI Schiphol"
+  }
+},
+{
+  "type": "way",
+  "id": 57863294,
+  "center": {
+    "lat": 52.3859897,
+    "lon": 4.8728262
+  },
+  "tags": {
+    "amenity": "arts_centre",
+    "building": "retail",
+    "height": "10.1",
+    "name": "Zuiveringsgebouw",
+    "ref:bag": "0363100012236902",
+    "source": "BAG",
+    "source:date": "2014-03-24",
+    "source:height": "3DBAG",
+    "source:height:date": "2025-09-03",
+    "start_date": "1885",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 137811382,
+  "center": {
+    "lat": 52.4127252,
+    "lon": 4.8019145
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "RWZI Westpoort"
+  }
+},
+{
+  "type": "way",
+  "id": 137928079,
+  "center": {
+    "lat": 52.3985466,
+    "lon": 4.7864066
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "RWZI Amsterdam West",
+    "operator": "Waternet",
+    "website": "https://www.waternet.nl/"
+  }
+},
+{
+  "type": "way",
+  "id": 240843606,
+  "center": {
+    "lat": 52.3188399,
+    "lon": 5.0213006
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "RWZI Weesp",
+    "operator": "Waternet"
+  }
+},
+{
+  "type": "way",
+  "id": 260595783,
+  "center": {
+    "lat": 52.3621744,
+    "lon": 4.9027896
+  },
+  "tags": {
+    "CEMT": "II",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Amstelsluis",
+    "maxspeed": "7.5",
+    "name": "Amstel",
+    "oneway": "yes",
+    "waterway": "canal",
+    "wikidata": "Q15869955",
+    "wikipedia": "nl:Amstelsluizen"
+  }
+},
+{
+  "type": "way",
+  "id": 260595784,
+  "center": {
+    "lat": 52.3622102,
+    "lon": 4.9029516
+  },
+  "tags": {
+    "CEMT": "II",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Amstelsluis",
+    "maxspeed": "7.5",
+    "name": "Amstel",
+    "oneway": "yes",
+    "waterway": "canal",
+    "wikidata": "Q15869955"
+  }
+},
+{
+  "type": "way",
+  "id": 260595785,
+  "center": {
+    "lat": 52.3622780,
+    "lon": 4.9033309
+  },
+  "tags": {
+    "CEMT": "II",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Amstelsluis",
+    "maxspeed": "7.5",
+    "name": "Amstel",
+    "oneway": "yes",
+    "waterway": "canal",
+    "wikidata": "Q15869955",
+    "wikipedia": "nl:Amstelsluizen"
+  }
+},
+{
+  "type": "way",
+  "id": 260926845,
+  "center": {
+    "lat": 52.4009052,
+    "lon": 5.2471870
+  },
+  "tags": {
+    "addr:city": "Almere",
+    "addr:housenumber": "27",
+    "addr:street": "Vlotbrugweg",
+    "man_made": "wastewater_plant",
+    "name": "Afvalwaterzuiveringsinstallatie Almere",
+    "operator": "Waterschap Zuiderzeeland"
+  }
+},
+{
+  "type": "way",
+  "id": 274066572,
+  "center": {
+    "lat": 52.3859771,
+    "lon": 4.8721495
+  },
+  "tags": {
+    "building": "yes",
+    "height": "17.8",
+    "name": "Zuiveringshal West",
+    "ref:bag": "0363100012236268",
+    "source": "BAG",
+    "source:date": "2014-03-24",
+    "source:height": "3DBAG",
+    "source:height:date": "2025-09-03",
+    "start_date": "1885"
+  }
+},
+{
+  "type": "way",
+  "id": 296041737,
+  "center": {
+    "lat": 52.3551030,
+    "lon": 4.8977763
+  },
+  "tags": {
+    "waterway": "weir"
+  }
+},
+{
+  "type": "way",
+  "id": 318343840,
+  "center": {
+    "lat": 52.2256907,
+    "lon": 5.2087934
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Hilversum-Oost",
+    "operator": "Waterschap Amstel, Gooi en Vecht",
+    "utility": "sewerage"
+  }
+},
+{
+  "type": "way",
+  "id": 527004192,
+  "center": {
+    "lat": 52.3624935,
+    "lon": 4.9032217
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004193,
+  "center": {
+    "lat": 52.3623899,
+    "lon": 4.9026808
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004194,
+  "center": {
+    "lat": 52.3625143,
+    "lon": 4.9032139
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004195,
+  "center": {
+    "lat": 52.3624097,
+    "lon": 4.9026715
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004196,
+  "center": {
+    "lat": 52.3619415,
+    "lon": 4.9029049
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004197,
+  "center": {
+    "lat": 52.3619724,
+    "lon": 4.9030683
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004198,
+  "center": {
+    "lat": 52.3620117,
+    "lon": 4.9032802
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004199,
+  "center": {
+    "lat": 52.3619673,
+    "lon": 4.9028946
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004200,
+  "center": {
+    "lat": 52.3619908,
+    "lon": 4.9030619
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004201,
+  "center": {
+    "lat": 52.3620353,
+    "lon": 4.9032723
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004202,
+  "center": {
+    "lat": 52.3620665,
+    "lon": 4.9034360
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004203,
+  "center": {
+    "lat": 52.3620420,
+    "lon": 4.9034470
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 527004204,
+  "center": {
+    "lat": 52.3620591,
+    "lon": 4.9036116
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 547701949,
+  "center": {
+    "lat": 52.2681125,
+    "lon": 4.7762820
+  },
+  "tags": {
+    "addr:city": "Aalsmeer",
+    "addr:housenumber": "30",
+    "addr:postcode": "1431GW",
+    "addr:street": "Middenweg",
+    "description": "Ultra laagbelaste actief-slibinstallatie",
+    "fax": "+31 297 329 811",
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Aalsmeer",
+    "operator": "Hoogheemraadschap van Rijnland",
+    "phone": "+31 297 344 716",
+    "short_name": "RWZI Aalsmeer",
+    "source": "https://www.watersector.nl/rwzi/57/rwzi",
+    "start_date": "1990"
+  }
+},
+{
+  "type": "way",
+  "id": 664507216,
+  "center": {
+    "lat": 52.3141344,
+    "lon": 5.0949767
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Waterzuivering Naardermeer"
+  }
+},
+{
+  "type": "way",
+  "id": 755417807,
+  "center": {
+    "lat": 52.2405479,
+    "lon": 4.8308091
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Uithoorn",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 797334784,
+  "center": {
+    "lat": 52.3620829,
+    "lon": 4.9037324
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 797334787,
+  "center": {
+    "lat": 52.3624849,
+    "lon": 4.9030468
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 797334788,
+  "center": {
+    "lat": 52.3624447,
+    "lon": 4.9028354
+  },
+  "tags": {
+    "seamark:type": "gate",
+    "waterway": "lock_gate"
+  }
+},
+{
+  "type": "way",
+  "id": 797334790,
+  "center": {
+    "lat": 52.3622474,
+    "lon": 4.9031650
+  },
+  "tags": {
+    "CEMT": "II",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Amstelsluis",
+    "maxspeed": "7.5",
+    "name": "Amstel",
+    "oneway": "yes",
+    "waterway": "canal",
+    "wikidata": "Q15869955"
+  }
+},
+{
+  "type": "way",
+  "id": 973622359,
+  "center": {
+    "lat": 52.1195864,
+    "lon": 5.1739983
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI De Bilt",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1031014328,
+  "center": {
+    "lat": 52.4135547,
+    "lon": 4.8010940
+  },
+  "tags": {
+    "name": "Zonnepark RWZI Westpoort",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1031039235,
+  "center": {
+    "lat": 52.3145924,
+    "lon": 4.8921986
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Amstelveen",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1031304190,
+  "center": {
+    "lat": 52.4014742,
+    "lon": 5.2471254
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark AWZI Almere",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1059918074,
+  "center": {
+    "lat": 52.2122530,
+    "lon": 4.8851775
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering De Ronde Venen",
+    "short_name": "RWZI De Ronde Venen"
+  }
+},
+{
+  "type": "way",
+  "id": 1136464233,
+  "center": {
+    "lat": 52.2638321,
+    "lon": 5.2498201
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Blaricum",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1300536152,
+  "center": {
+    "lat": 52.1199643,
+    "lon": 5.1748364
+  },
+  "tags": {
+    "addr:city": "De Bilt",
+    "addr:housenumber": "189",
+    "addr:postcode": "3737AE",
+    "addr:street": "Groenekanseweg",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering De Bilt",
+    "operator": "Hoogheemraadschap de Stichtse Rijnlanden"
+  }
+},
+{
+  "type": "way",
+  "id": 1351608649,
+  "center": {
+    "lat": 52.4300556,
+    "lon": 4.8587450
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Zaandam",
+    "opening_hours": "Mo-Fr 07:00-16:00; PH Off",
+    "operator": "Hoogheemraadschap Hollands Noorderkwartier",
+    "operator:wikidata": "Q4469762",
+    "short_name": "RWZI Zaandam"
+  }
+},
+{
+  "type": "way",
+  "id": 1352218541,
+  "center": {
+    "lat": 52.4304513,
+    "lon": 4.8600025
+  },
+  "tags": {
+    "name": "Zonnepark RWZI Zaandam",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1356982590,
+  "center": {
+    "lat": 52.4302026,
+    "lon": 4.8594371
+  },
+  "tags": {
+    "man_made": "clarifier",
+    "name": "Rioolwaterzuivering",
+    "natural": "water",
+    "water": "wastewater"
+  }
+},
+{
+  "type": "way",
+  "id": 1410345388,
+  "center": {
+    "lat": 52.1090153,
+    "lon": 5.1090315
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Utrecht",
+    "operator": "Hoogheemraadschap De Stichtse Rijnlanden",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant",
+    "start_date": "2025-05"
+  }
+},
+{
+  "type": "way",
+  "id": 1410345798,
+  "center": {
+    "lat": 52.1937977,
+    "lon": 5.2987267
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Soest",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "relation",
+  "id": 14734188,
+  "center": {
+    "lat": 52.2569599,
+    "lon": 5.0874575
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "Zonnepark RWZI Horstermeer",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "yes",
+    "plant:source": "solar",
+    "power": "plant",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

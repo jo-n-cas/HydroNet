@@ -1,0 +1,482 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-28T13:05:50Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 197774552,
+  "lat": 52.1643159,
+  "lon": 4.9931965,
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Breukelen"
+  }
+},
+{
+  "type": "node",
+  "id": 247370650,
+  "lat": 52.3618446,
+  "lon": 4.7388474,
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "AWZI Zwanenburg",
+    "operator": "Hoogheemraadschap van Rijnland"
+  }
+},
+{
+  "type": "node",
+  "id": 649479414,
+  "lat": 52.1517748,
+  "lon": 5.0382663,
+  "tags": {
+    "man_made": "wastewater_plant"
+  }
+},
+{
+  "type": "node",
+  "id": 2735459829,
+  "lat": 52.3989499,
+  "lon": 4.7933124,
+  "tags": {
+    "addr:city": "Amsterdam",
+    "addr:housenumber": "15",
+    "addr:postcode": "1046BS",
+    "addr:street": "Australiëhavenweg",
+    "man_made": "wastewater_plant",
+    "name": "RWZI Amsterdam West",
+    "operator": "Stichting Waternet",
+    "phone": "+31 20 608 2989",
+    "source": "BAG",
+    "source:date": "2014-02-11"
+  }
+},
+{
+  "type": "node",
+  "id": 2896536567,
+  "lat": 52.4293982,
+  "lon": 4.8573193,
+  "tags": {
+    "addr:city": "Zaandam",
+    "addr:housenumber": "467",
+    "addr:postcode": "1504NX",
+    "addr:street": "Poelenburg",
+    "man_made": "wastewater_plant",
+    "source": "BAG;local knowledge",
+    "source:date": "2014-06-02"
+  }
+},
+{
+  "type": "way",
+  "id": 6319584,
+  "center": {
+    "lat": 52.1101106,
+    "lon": 5.1075842
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Utrecht",
+    "operator": "Hoogheemraadschap De Stichtse Rijnlanden"
+  }
+},
+{
+  "type": "way",
+  "id": 6319722,
+  "center": {
+    "lat": 52.1939878,
+    "lon": 5.2977144
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Soest"
+  }
+},
+{
+  "type": "way",
+  "id": 6319841,
+  "center": {
+    "lat": 52.2580000,
+    "lon": 5.0853500
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "RWZI Horstermeer"
+  }
+},
+{
+  "type": "way",
+  "id": 23087306,
+  "center": {
+    "lat": 52.1127069,
+    "lon": 5.0384340
+  },
+  "tags": {
+    "addr:city": "Utrecht",
+    "image": "https://www.hdsr.nl/publish/pages/177572/682px/rwzi_leidsche_rijn.jpg",
+    "man_made": "wastewater_plant",
+    "name": "RWZI - Leidsche Rijn",
+    "source": "yahoo aerial imaging",
+    "website": "https://www.hdsr.nl/buurt/utrecht/celluloseterugwinning-rwzi-leidsche-rijn/"
+  }
+},
+{
+  "type": "way",
+  "id": 23389514,
+  "center": {
+    "lat": 52.1879225,
+    "lon": 4.7584635
+  },
+  "tags": {
+    "barrier": "fence",
+    "man_made": "wastewater_plant",
+    "name": "AWZI Nieuwveen",
+    "operator": "Hoogheemraadschap van Rijnland"
+  }
+},
+{
+  "type": "way",
+  "id": 23391409,
+  "center": {
+    "lat": 52.3615417,
+    "lon": 4.7399613
+  },
+  "tags": {
+    "area": "yes",
+    "fenced": "yes",
+    "man_made": "wastewater_plant",
+    "name": "Afvalwaterzuivering Zwanenburg",
+    "operator": "Hoogheemraadschap van Rijnland",
+    "wastewater": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 26809191,
+  "center": {
+    "lat": 52.3138520,
+    "lon": 4.8908771
+  },
+  "tags": {
+    "alt_name": "RWZI Amstelveen",
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Amstelveen",
+    "operator": "Waternet"
+  }
+},
+{
+  "type": "way",
+  "id": 30743398,
+  "center": {
+    "lat": 52.2914387,
+    "lon": 4.7874972
+  },
+  "tags": {
+    "area": "yes",
+    "man_made": "wastewater_plant",
+    "name": "AWZI Schiphol"
+  }
+},
+{
+  "type": "way",
+  "id": 72717500,
+  "center": {
+    "lat": 52.2247924,
+    "lon": 5.0093487
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "source": "3dShapes"
+  }
+},
+{
+  "type": "way",
+  "id": 137928079,
+  "center": {
+    "lat": 52.3985466,
+    "lon": 4.7864066
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "RWZI Amsterdam West",
+    "operator": "Waternet",
+    "website": "https://www.waternet.nl/"
+  }
+},
+{
+  "type": "way",
+  "id": 240843606,
+  "center": {
+    "lat": 52.3188399,
+    "lon": 5.0213006
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "RWZI Weesp",
+    "operator": "Waternet"
+  }
+},
+{
+  "type": "way",
+  "id": 260926845,
+  "center": {
+    "lat": 52.4009052,
+    "lon": 5.2471870
+  },
+  "tags": {
+    "addr:city": "Almere",
+    "addr:housenumber": "27",
+    "addr:street": "Vlotbrugweg",
+    "man_made": "wastewater_plant",
+    "name": "Afvalwaterzuiveringsinstallatie Almere",
+    "operator": "Waterschap Zuiderzeeland"
+  }
+},
+{
+  "type": "way",
+  "id": 318343840,
+  "center": {
+    "lat": 52.2256907,
+    "lon": 5.2087934
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Hilversum-Oost",
+    "operator": "Waterschap Amstel, Gooi en Vecht",
+    "utility": "sewerage"
+  }
+},
+{
+  "type": "way",
+  "id": 547701949,
+  "center": {
+    "lat": 52.2681125,
+    "lon": 4.7762820
+  },
+  "tags": {
+    "addr:city": "Aalsmeer",
+    "addr:housenumber": "30",
+    "addr:postcode": "1431GW",
+    "addr:street": "Middenweg",
+    "description": "Ultra laagbelaste actief-slibinstallatie",
+    "fax": "+31 297 329 811",
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuiveringsinstallatie Aalsmeer",
+    "operator": "Hoogheemraadschap van Rijnland",
+    "phone": "+31 297 344 716",
+    "short_name": "RWZI Aalsmeer",
+    "source": "https://www.watersector.nl/rwzi/57/rwzi",
+    "start_date": "1990"
+  }
+},
+{
+  "type": "way",
+  "id": 664507216,
+  "center": {
+    "lat": 52.3141344,
+    "lon": 5.0949767
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Waterzuivering Naardermeer"
+  }
+},
+{
+  "type": "way",
+  "id": 708139830,
+  "center": {
+    "lat": 52.3473363,
+    "lon": 4.9127004
+  },
+  "tags": {
+    "bicycle": "use_sidepath",
+    "bridge": "yes",
+    "bridge:name": "Berlagebrug",
+    "embedded_rails": "tram",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "30",
+    "maxweight:signed": "no",
+    "mofa": "designated",
+    "moped": "designated",
+    "name": "Berlagebrug",
+    "noref": "yes",
+    "official_name": "Mr. Treublaan",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through;right",
+    "turn:lanes:forward": "through|through;right",
+    "width": "14",
+    "wikidata": "Q11721711",
+    "wikimedia_commons": "Category:Brug 423, Berlagebrug",
+    "wikipedia": "nl:Berlagebrug (Amsterdam)"
+  }
+},
+{
+  "type": "way",
+  "id": 776286155,
+  "center": {
+    "lat": 52.3186215,
+    "lon": 5.0222317
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "building",
+    "man_made": "wastewater_plant",
+    "natural": "water",
+    "water": "wastewater"
+  }
+},
+{
+  "type": "way",
+  "id": 776286156,
+  "center": {
+    "lat": 52.3190242,
+    "lon": 5.0226573
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "building",
+    "man_made": "wastewater_plant",
+    "natural": "water",
+    "water": "wastewater"
+  }
+},
+{
+  "type": "way",
+  "id": 1059912960,
+  "center": {
+    "lat": 52.3102927,
+    "lon": 5.2407568
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1059918074,
+  "center": {
+    "lat": 52.2122530,
+    "lon": 4.8851775
+  },
+  "tags": {
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering De Ronde Venen",
+    "short_name": "RWZI De Ronde Venen"
+  }
+},
+{
+  "type": "way",
+  "id": 1272391496,
+  "center": {
+    "lat": 52.3472694,
+    "lon": 4.9127256
+  },
+  "tags": {
+    "bridge": "yes",
+    "foot": "use_sidepath",
+    "highway": "cycleway",
+    "lanes": "1",
+    "layer": "1",
+    "lit": "yes",
+    "lit:indirect": "yes",
+    "mofa": "no",
+    "moped": "no",
+    "name": "Berlagebrug",
+    "official_name": "Mr. Treublaan",
+    "oneway": "yes",
+    "sidewalk:right": "separate",
+    "smoothness": "good",
+    "solitary": "yes",
+    "surface": "asphalt",
+    "surface:colour": "red",
+    "traffic_sign": "NL:G11",
+    "width": "2.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1300536152,
+  "center": {
+    "lat": 52.1199643,
+    "lon": 5.1748364
+  },
+  "tags": {
+    "addr:city": "De Bilt",
+    "addr:housenumber": "189",
+    "addr:postcode": "3737AE",
+    "addr:street": "Groenekanseweg",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering De Bilt",
+    "operator": "Hoogheemraadschap de Stichtse Rijnlanden"
+  }
+},
+{
+  "type": "way",
+  "id": 1351608649,
+  "center": {
+    "lat": 52.4300556,
+    "lon": 4.8587450
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "wastewater_plant",
+    "name": "Rioolwaterzuivering Zaandam",
+    "opening_hours": "Mo-Fr 07:00-16:00; PH Off",
+    "operator": "Hoogheemraadschap Hollands Noorderkwartier",
+    "operator:wikidata": "Q4469762",
+    "short_name": "RWZI Zaandam"
+  }
+},
+{
+  "type": "relation",
+  "id": 18580784,
+  "center": {
+    "lat": 52.3473350,
+    "lon": 4.9127008
+  },
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge",
+    "name": "Berlagebrug",
+    "type": "multipolygon",
+    "wikidata": "Q11721711",
+    "wikimedia_commons": "Category:Brug 423, Berlagebrug",
+    "wikipedia": "nl:Berlagebrug (Amsterdam)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18656223,
+  "center": {
+    "lat": 52.3473356,
+    "lon": 4.9126930
+  },
+  "tags": {
+    "bridge": "yes",
+    "layer": "1",
+    "name": "Berlagebrug",
+    "start_date": "1932",
+    "type": "bridge",
+    "wikidata": "Q11721711",
+    "wikimedia_commons": "Category:Brug 423, Berlagebrug",
+    "wikipedia": "nl:Berlagebrug (Amsterdam)"
+  }
+}
+
+  ]
+}

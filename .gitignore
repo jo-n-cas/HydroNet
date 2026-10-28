@@ -6,3 +6,4 @@ __pycache__/
 *.geojson
 *.xlsx
 .venv/
+!config/*.csv

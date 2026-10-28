@@ -24,17 +24,39 @@ amstel:
   overrides: config/amstel_overrides.csv
   ui_buffer_options_m: [25, 50, 100]
   ui_default_buffer_m: 100
-  # Hydrology sensor positions: not in the data. TODO: fill from an approved open source and document in DECISIONS.md.
+  # Hydrology sensor positions are not in the data: taken from the OSM structures they are named after (ASSUMED:
+  # the exact sensor position at the structure is unknown). Source: OpenStreetMap, Overpass query 2026-10-28.
   sensors:
-    Amstelsluizen: {sensor_id: MPP00013_LIT054_1, x_rd: null, y_rd: null, source: null}
-    Berlagebrug: {sensor_id: MPP00976_LIT054_1, x_rd: null, y_rd: null, source: null}
+    Amstelsluizen: {sensor_id: MPP00013_LIT054_1, lat: 52.36222, lon: 4.90310, x_rd: 122025, y_rd: 486147, chainage_km: 21.02, osm_ref: "lock_gate ways 527004192-527004204 (centroid)", source: "OpenStreetMap, ODbL"}
+    Berlagebrug: {sensor_id: MPP00976_LIT054_1, lat: 52.34734, lon: 4.91270, x_rd: 122668, y_rd: 484487, chainage_km: 19.23, osm_ref: "relation/18580784", source: "OpenStreetMap, ODbL"}
 
 pressures:
   agv_installation_prefix: NL.11
-  rwzi_locations: config/rwzi_locations.csv        # TODO: to be created from open data (instructions 5.5)
+  rwzi_locations: config/rwzi_locations.csv        # from OSM 2026-10-28; 9 of 12 AGV plants located (see DECISIONS.md)
   # Plants linked to the Amstel in sources (IPLO 2024; 2017 permit documents). ASSUMED until discharge points are verified.
   amstel_linked_rwzi: [NL.11.UI, NL.11.RV, NL.11.AM]
   nearby_station_buffer_m: 2000                    # placeholder analysis choice, shown in the UI; not a norm
+  # Effluent metrics: a row belongs to a metric when quantity, parameter AND unit all match
+  # (checked against the real NL.11 effluent rows 2026-10-28). 'Pulsvolume' (m3/p) is a pulse size, not a flow.
+  effluent_metrics:
+    volume:
+      label: Effluent volume
+      match: {quantity: Volume, parameter: Niet van toepassing, unit: m3}
+      yearly: sum                                  # m3 per year
+      yearly_unit: m3/year
+    phosphate:
+      label: Effluent phosphate (dissolved, as P)
+      match: {quantity: (massa)Concentratie, parameter: fosfaat, unit: mg/l}
+      yearly: median                               # median of daily values
+      yearly_unit: mg P/l
+    suspended_solids:
+      label: Effluent suspended solids
+      match: {quantity: (massa)Concentratie, parameter: Onopgeloste bestandsdelen, unit: mg/l}
+      yearly: median
+      yearly_unit: mg/l
+  # Measurement points that are not final effluent although tagged Effluent.
+  exclude_measurement_points:
+    - 11.AWwlBI.mi-001.PO4                         # "Online PO4 NBT 2.1 Onderzoekstraat" (research line)
 
 cleaning:
   sentinel_values: [-999]
@@ -45,3 +67,6 @@ ui:
   data_dir: tests/fixtures/processed
   default_parameter_group: tier1_nutrients_core
   default_parameter: Ptot_mgP/l
+  phosphorus_chain:
+    default_plant: NL.11.UI                        # upstream, nearest Amstel-linked plant (0.8 km)
+    window_km: 3                                   # corridor stretch either side of the plant's nearest river km

@@ -61,12 +61,13 @@ Parameter codes below are verified against `FYCHEM_unique_locations_with_measure
 
 **Pressure side (RWZI data):** effluent phosphate (`fosfaat`) is available daily 2021–2025 for 4 AGV plants (Amsterdam West, Blaricum, Huizen, Weesp); effluent suspended solids and volume for most plants. Determine in Phase 5 which plants discharge into the Amstel catchment. Uithoorn, De Ronde Venen and Amstelveen are the Amstel-linked plants but have no effluent phosphate in the current data; if so, the demo uses effluent volume for those plants and states the gap, or uses a plant with phosphate data and documents why.
 
-**Data gaps to report, not analyse:**
-- PFAS (`PFOS_*`, `PFOA_*`): only 4–12 sites; present as "too sparse to trace / no clear source".
-- Medicine residues: AGV's current Amstel priority (ozone/activated-carbon upgrades at Uithoorn and De Ronde Venen), but no codes were found by name (e.g. diclofenac, carbamazepine). In Phase 1, do a full check of all 784 FYCHEM codes against the dictionary and confirm whether medicines are absent.
+**Sparse tracers: shown as an upstream/downstream pair, not analysed for sources** (corrected 2026-10-28 after a full check against the dictionary's `P_categorie`):
+- **Medicine residues** (`P_categorie = MEDICIJN`): 47 codes (e.g. carbamazepine, metoprolol), measured at only **3 locations AGV-wide, all on the Amstel**: `AMS003` and `AMS030` at km 0.75 (upstream, just below Uithoorn) and `ADM016` at km 21.2 (downstream, Amsterdam). This matches AGV's current Amstel priority (ozone and activated-carbon upgrades at the Uithoorn and De Ronde Venen RWZIs). An earlier search by name missed these codes.
+- **PFAS**: 42 codes at 16 locations AGV-wide. On the Amstel only `AMS030` (km 0.75) and `ADM016` (km 21.2). 35 of the 42 codes (the ng/l panel, including GenX `FRD-903` and `ADONA`) have no entry in `Parameter_uitleg.xlsx`: they are exactly the dictionary's 35 "NOT FOUND" FYCHEM codes.
+- Both are too sparse to trace a source. Present them as "measured at the upstream and downstream ends of the Amstel only; no source tracing possible", and request the values from AGV with priority.
 
 **Rules that follow from the focus:**
-- `config/parameter_groups.yaml` defines the groups `tier1_nutrients_core`, `tier2_metals`, `tier2_bacteria`, `tier2_organic_load`, `tier2_pesticides`, `tier3_biology`, `gap_pfas`, `gap_medicines`, with the codes above. Tier 1 is the default group in the sidebar.
+- `config/parameter_groups.yaml` defines the groups (Tier 1 nutrients; Tier 2 metals, bacteria, organic load, pesticides, medicines, PFAS; Tier 3 macrophytes, fish, macroinvertebrates, phytoplankton, other biology) by exact codes, dictionary category (`P_categorie`) or code prefix. Tier 1 is the default group in the sidebar. Sparse groups are marked `sparse: true`.
 - `docs/DATA_REQUEST.md` lists Tier 1 first, then Tier 2, and asks AGV for raw values on the Amstel corridor plus the water-type-specific KRW targets for the Amstel waterbody. Note that KRW waterbody `NL11_1_1` is the "Amstellandboezem" (the wider regional canal system), not the Amstel river alone.
 - No KRW norm values are hard-coded. Any target quoted from literature (e.g. an earlier Ptot target of 0.21 mg/l for the Amstel) is shown only as a cited reference with source and year, never as a current norm.
 

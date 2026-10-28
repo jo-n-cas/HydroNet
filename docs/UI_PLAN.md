@@ -1,6 +1,6 @@
 # HydroNet UI plan
 
-Status: draft for approval, revision 2 (Amstel-only focus).
+Status: approved and built (2026-10-28, branch `ui`). Deviations from this plan are logged in `docs/DECISIONS.md`: the pages live in `app/views/` (not `app/pages/`); `empty_state` is in `components/provenance.py`; the base map uses OSM tiles; the default buffer is 100 m.
 
 ## 0. Spatial focus: the Amstel river only (decided)
 
