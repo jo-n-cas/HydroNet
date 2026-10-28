@@ -10,7 +10,8 @@ import math
 from pathlib import Path
 import re
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / 'data/internal'
 OUT = ROOT / 'structural_subset'
 
 
@@ -62,8 +63,8 @@ def main():
     if min(args.min_dates, args.min_years, args.radius_m, args.min_chem_count) < 1:
         parser.error('all thresholds must be positive')
 
-    bio = json.loads((ROOT / 'HB_unique_locations_with_measurements.geojson').read_text(encoding='utf-8'))
-    chem = json.loads((ROOT / 'FYCHEM_unique_locations_with_measurements.geojson').read_text(encoding='utf-8'))
+    bio = json.loads((DATA / 'HB_unique_locations_with_measurements.geojson').read_text(encoding='utf-8'))
+    chem = json.loads((DATA / 'FYCHEM_unique_locations_with_measurements.geojson').read_text(encoding='utf-8'))
     positions = {}
     sources = defaultdict(set)
     feature_by_code = {}
@@ -78,7 +79,7 @@ def main():
             sources[code].add(label)
             feature_by_code.setdefault(code, feature)
 
-    with (ROOT / 'HB_sampled50locations.csv').open(encoding='utf-8-sig', newline='') as source:
+    with (DATA / 'HB_sampled50locations.csv').open(encoding='utf-8-sig', newline='') as source:
         reader = csv.DictReader(source, delimiter=';')
         fields = reader.fieldnames
         rows = list(reader)

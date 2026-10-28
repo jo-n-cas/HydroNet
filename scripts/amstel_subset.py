@@ -5,7 +5,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data/internal"
 OUT = ROOT / "amstel_subset"
 
 
@@ -23,7 +24,7 @@ def main():
         ("chem", "FYCHEM_unique_locations_with_measurements.geojson"),
         ("bio", "HB_unique_locations_with_measurements.geojson"),
     ):
-        data = json.loads((ROOT / filename).read_text(encoding="utf-8"))
+        data = json.loads((DATA / filename).read_text(encoding="utf-8"))
         data["features"] = [f for f in data["features"] if f["properties"]["locatiecode"] in ids]
         for feature in data["features"]:
             p = feature["properties"]
@@ -46,7 +47,7 @@ def main():
             writer.writerow([code, order, "chem" in station["sources"], "bio" in station["sources"],
                              *station["point"], station["chem_obs"], station["bio_obs"], code == "KMU103"])
 
-    with (ROOT / "HB_sampled50locations.csv").open(encoding="utf-8-sig", newline="") as source, \
+    with (DATA / "HB_sampled50locations.csv").open(encoding="utf-8-sig", newline="") as source, \
             (OUT / "HB_sampled50locations.csv").open("w", encoding="utf-8", newline="") as target:
         reader = csv.DictReader(source, delimiter=";")
         writer = csv.DictWriter(target, fieldnames=reader.fieldnames, delimiter=";")
