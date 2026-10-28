@@ -1,0 +1,13 @@
+installation,name,lat,lon,x_rd,y_rd,osm_ref,location_basis,discharge_point_verified,source
+NL.11.AM,rwzi Amstelveen,52.31385,4.89088,121155,480771,way/26809191,plant site (OSM wastewater_plant),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.AW,rwzi Amsterdam West,52.39855,4.78641,114110,490248,way/137928079,plant site (OSM wastewater_plant),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.BL,rwzi Blaricum,52.26383,5.24982,145621,475098,way/1136464233,proxy: solar park on plant grounds (Zonnepark RWZI Blaricum),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.HI,rwzi Hilversum,52.22569,5.20879,142810,470861,way/318343840,"plant site (OSM wastewater_plant, Hilversum-Oost, operator AGV)",False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.HO,rwzi Horstermeer,52.258,5.08535,134391,474484,way/6319841,plant site (OSM wastewater_plant),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.HU,rwzi Huizen,,,,,,"not found: no named OSM feature (unnamed plant at 52.3103,5.2408 not used)",False,
+NL.11.LO,rwzi Loenen,,,,,,"not found: no named OSM feature (unnamed plant at 52.2248,5.0094 not used)",False,
+NL.11.MA,rwzi Maarssen,,,,,,"not found: no named OSM feature (unnamed plant at 52.1518,5.0383 not used)",False,
+NL.11.RV,rwzi Ronde Venen,52.21225,4.88518,120689,469469,way/1059918074,plant site (OSM wastewater_plant),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.UI,rwzi Uithoorn,52.24055,4.83081,116997,472645,way/755417807,proxy: solar park on plant grounds (Zonnepark RWZI Uithoorn),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.WE,rwzi Weesp,52.31884,5.0213,130052,481273,way/240843606,plant site (OSM wastewater_plant),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"
+NL.11.WP,rwzi Westpoort,52.41273,4.80191,115178,491817,way/137811382,plant site (OSM landuse=industrial named RWZI Westpoort),False,"OpenStreetMap (© OpenStreetMap contributors, ODbL), Overpass query 2026-10-28"

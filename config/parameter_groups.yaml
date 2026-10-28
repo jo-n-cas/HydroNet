@@ -1,0 +1,138 @@
+# HydroNet parameter groups (instructions Section 1.1; approved focus: nutrients led by phosphorus).
+# DRAFT for review by the team's marine biologist (2026-10-28).
+#
+# How a code is assigned: groups are tried in the order listed; the first group whose rule matches wins.
+# A rule can use:
+#   codes:      exact parameter codes (fewsparameter / parameter_counts keys)
+#   category:   dictionary column P_categorie in Parameter_uitleg.xlsx
+#   prefixes:   code prefixes (used for biology codes)
+# Codes matched by no group go to "other" (the pipeline reports how many).
+# Counts in comments are FYCHEM/HB inventory locations AGV-wide (Amstel = within 100 m), checked 2026-10-28.
+
+groups:
+
+  tier1_nutrients_core:
+    label: "Tier 1 · Nutrients and their effects (core focus)"
+    tier: 1
+    default: true
+    codes:
+      - Ptot_mgP/l            # total phosphorus: lead nutrient (1,054 locations)
+      - PO4_mgP/l_nf          # ortho-phosphate, dissolved (954)
+      - Ntot_mgN/l            # total nitrogen (1,038)
+      - NH4_mgN/l_nf          # ammonium: sewage signature (1,029)
+      - NO3_mgN/l_nf          # nitrate: agricultural signature (998)
+      - O2_%                  # oxygen saturation (1,001)
+      - O2_mg/l               # oxygen concentration (1,091)
+      - CHLFa_ug/l_spectro    # chlorophyll-a: algae response (1,058)
+      - ZICHT_m               # water clarity (1,001 chem + 3,511 bio)
+      - T_oC                  # context (1,122)
+      - pH                    # context (1,094)
+      - Cl_mg/l               # context (957)
+
+  tier2_metals:
+    label: "Tier 2 · Metals (urban / industrial tracers)"
+    tier: 2
+    category: METAL           # 52 codes, 659 locations; Amstel: 22 codes, 17 locations
+
+  tier2_bacteria:
+    label: "Tier 2 · Faecal bacteria (sewage / overflow tracers)"
+    tier: 2
+    category: BACT            # 5 codes, 597 locations; Amstel: 4 codes, 21 locations
+
+  tier2_organic_load:
+    label: "Tier 2 · Organic load (oxygen demand)"
+    tier: 2
+    codes: [BZV5a_mgO2/l, BZV5_mgO2/l, CZV_mgO2/l]
+
+  tier2_pesticides:
+    label: "Tier 2 · Pesticides (agricultural tracers)"
+    tier: 2
+    category: BEST            # 492 codes, 176 locations; Amstel: 379 codes, 10 locations
+
+  tier2_medicines:
+    label: "Tier 2 · Medicine residues (wastewater tracers; sparse)"
+    tier: 2
+    sparse: true
+    # 47 codes at only 3 locations AGV-wide, all on the Amstel: AMS003 and AMS030 (km 0.75, upstream)
+    # and ADM016 (km 21.2, downstream). Too sparse to trace a source; shown as an upstream/downstream pair.
+    category: MEDICIJN
+
+  tier2_pfas:
+    label: "Tier 2 · PFAS (diffuse; sparse)"
+    tier: 2
+    sparse: true
+    # 42 codes at 16 locations AGV-wide; on the Amstel only AMS030 (km 0.75) and ADM016 (km 21.2).
+    # The 35 ng/l codes below have NO entry in Parameter_uitleg.xlsx (they are the dictionary's 35 "NOT FOUND" codes).
+    codes:
+      # in dictionary (category REST)
+      - PFOA_ug/l
+      - PFOS_ug/l
+      - slinvertPFOA_ug/l
+      - slinvertPFOS_ug/l
+      - sverttPFOA_ug/l
+      - sverttPFOS_ug/l
+      - 2PFC6yC2a1sf_ng/l
+      # not in dictionary
+      - 11ClPF3OUdS_ng/l
+      - 9-Cl-PF3ONS_ng/l
+      - ADONA_ng/l
+      - EtFOSAA_ng/l
+      - FRD-903_ng/l          # GenX
+      - H-PFC10asfzr_ng/l
+      - H-PFC12asfzr_ng/l
+      - H-PFC6asfzr_ng/l
+      - L_PFBS_ng/l
+      - L_PFDS_ng/l
+      - L_PFHpS_ng/l
+      - L_PFHxS_ng/l
+      - N-MeFOSAA_ng/l
+      - PFBA_ng/l
+      - PFC5asfzr_ng/l
+      - PFC9asfzr_ng/l
+      - PFDA_ng/l
+      - PFDoA_ng/l
+      - PFHpA_ng/l
+      - PFHxA_ng/l
+      - PFNA_ng/l
+      - PFOA_ng/l
+      - PFOSA_ng/l
+      - PFOS_ng/l
+      - PFPA_ng/l
+      - PFTDA_ng/l
+      - PFTeDA_ng/l
+      - PFUdA_ng/l
+      - cF16C10ezr_ng/l
+      - slinverPFHxS_ng/l
+      - slinvertPFOA_ng/l
+      - slinvertPFOS_ng/l
+      - sverttPFHxS_ng/l
+      - sverttPFOA_ng/l
+      - sverttPFOS_ng/l
+
+  tier3_macrophytes:
+    label: "Tier 3 · Aquatic plants (macrophytes)"
+    tier: 3
+    prefixes: [PTN_]          # PTN_BEDKG_% at 3,665 locations
+
+  tier3_fish:
+    label: "Tier 3 · Fish"
+    tier: 3
+    prefixes: [VSLC_, VISSN_, VISVFTR]
+
+  tier3_macroinvertebrates:
+    label: "Tier 3 · Macroinvertebrates"
+    tier: 3
+    prefixes: [MEA_, MACEV_]
+
+  tier3_phytoplankton:
+    label: "Tier 3 · Phytoplankton and algae"
+    tier: 3
+    prefixes: [FPA_, DTA_]
+    codes: [CHLFa_ug/l_blauwalg, CHLFa_ug/l_groenalg, CHLFa_ug/l_diatomee, CHLFa_ug/l_cryptofy, CHLFa_ug/l_fluo]
+
+  tier3_other_biology:
+    label: "Tier 3 · Zooplankton, nematodes, amphibians"
+    tier: 3
+    prefixes: [ZPT_, ZOOPT_, NEMTD_, AMFBE_]
+
+# Not a group: everything else (field observations, sampling set-up, ions, PAHs, PCBs, light, ...) -> "other".

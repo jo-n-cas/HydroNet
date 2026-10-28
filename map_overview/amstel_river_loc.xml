@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1539916 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <relation id="12882829" visible="true" version="12" changeset="159249097" timestamp="2024-11-17T16:01:33Z" user="GA_VOR_OK_JO" uid="21689011">
+  <member type="way" ref="96361938" role="main_stream"/>
+  <member type="way" ref="312563296" role="main_stream"/>
+  <member type="way" ref="881315102" role="main_stream"/>
+  <member type="way" ref="70385077" role="main_stream"/>
+  <member type="way" ref="1334812575" role="main_stream"/>
+  <member type="way" ref="1334812576" role="main_stream"/>
+  <member type="way" ref="1334812574" role="main_stream"/>
+  <member type="way" ref="1334812573" role="main_stream"/>
+  <member type="way" ref="881129200" role="main_stream"/>
+  <member type="way" ref="881129189" role="main_stream"/>
+  <member type="way" ref="1322986011" role="main_stream"/>
+  <member type="way" ref="1322986012" role="main_stream"/>
+  <member type="way" ref="1322986013" role="main_stream"/>
+  <member type="way" ref="881129188" role="main_stream"/>
+  <member type="way" ref="1322986015" role="main_stream"/>
+  <member type="way" ref="527004184" role="main_stream"/>
+  <member type="way" ref="1322986014" role="main_stream"/>
+  <member type="way" ref="527004185" role="main_stream"/>
+  <member type="way" ref="260595784" role="main_stream"/>
+  <member type="way" ref="797334786" role="main_stream"/>
+  <member type="way" ref="527004188" role="main_stream"/>
+  <member type="way" ref="260595783" role="main_stream"/>
+  <member type="way" ref="527004189" role="main_stream"/>
+  <member type="way" ref="797334789" role="main_stream"/>
+  <member type="way" ref="797334790" role="main_stream"/>
+  <member type="way" ref="797334785" role="main_stream"/>
+  <member type="way" ref="527004190" role="main_stream"/>
+  <member type="way" ref="260595785" role="main_stream"/>
+  <member type="way" ref="527004191" role="main_stream"/>
+  <member type="way" ref="1322986010" role="main_stream"/>
+  <member type="way" ref="1322986009" role="main_stream"/>
+  <member type="way" ref="30123973" role="main_stream"/>
+  <member type="way" ref="1322986008" role="main_stream"/>
+  <member type="way" ref="1322986007" role="main_stream"/>
+  <member type="way" ref="1322986006" role="main_stream"/>
+  <member type="way" ref="195582876" role="main_stream"/>
+  <member type="way" ref="1322626544" role="main_stream"/>
+  <member type="way" ref="1322626543" role="main_stream"/>
+  <member type="way" ref="195582877" role="main_stream"/>
+  <tag k="name" v="Amstel"/>
+  <tag k="name:nl" v="Amstel"/>
+  <tag k="name:ru" v="Амстел"/>
+  <tag k="type" v="waterway"/>
+  <tag k="waterway" v="river"/>
+  <tag k="wikidata" v="Q185405"/>
+  <tag k="wikipedia" v="nl:Amstel (rivier)"/>
+ </relation>
+</osm>

@@ -1,0 +1,13 @@
+csv/
+Flags/
+data/
+amstel_subset/
+
+.DS_Store
+__pycache__/
+
+*.csv
+*.geojson
+*.xlsx
+.venv/
+!config/*.csv
